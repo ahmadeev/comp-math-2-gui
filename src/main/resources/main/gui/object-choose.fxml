@@ -3,9 +3,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ObjectChoose">
+   <Button fx:id="ocB0" layoutX="79.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 1" />
+   <Button fx:id="ocB1" layoutX="200.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 2" />
+   <Button fx:id="ocB2" layoutX="329.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 3" />
+   <Button fx:id="ocB3" layoutX="447.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 4" />
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.ObjectChoose">
-   <Button layoutX="177.0" layoutY="228.0" mnemonicParsing="false" text="Button"/>
-   <Button layoutX="382.0" layoutY="228.0" mnemonicParsing="false" text="Button"/>
 </AnchorPane>
