@@ -26,7 +26,6 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         loadScene(stage, "mode-select.fxml", "solving equations");
-        //loadScene(stage, "object-choose.fxml", "meow!");
     }
 
     public static void main(String[] args) {

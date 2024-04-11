@@ -13,8 +13,10 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static java.util.Objects.isNull;
 import static main.gui.Main.data;
 import static main.gui.Main.loadScene;
+import static math.utils.Utils.exit;
 
 public class ObjectChoose implements Initializable {
     @FXML
@@ -28,7 +30,7 @@ public class ObjectChoose implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dTF0.textProperty().addListener(new ChangeListener<String>() {
+/*        dTF0.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
                 data.setLowerBoundary(Double.parseDouble(newValue));
@@ -45,7 +47,43 @@ public class ObjectChoose implements Initializable {
             public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
                 data.setPrecision(Double.parseDouble(newValue));
             }
+        });*/
+        //  "-?0[.,][0-9]{1,6} | 0 | -?[1-9]+([.,][0-9]{1,6})?"
+/*        dTF0.focusedProperty().addListener((arg0, oldValue, newValue) -> {
+            if (!newValue) {
+                String text = dTF0.getText();
+                if (text.matches("[+-]?([0-9]*[.,])?[0-9]+")) {
+                    text = text.replace(",", ".");
+                    data.setLowerBoundary(Double.parseDouble(text));
+                } else {
+                    exit("Введенное число не соответствует паттерну!", 1);
+                }
+            }
         });
+
+        dTF1.focusedProperty().addListener((arg0, oldValue, newValue) -> {
+            if (!newValue) {
+                String text = dTF1.getText();
+                if (text.matches("[+-]?([0-9]*[.,])?[0-9]+")) {
+                    text = text.replace(",", ".");
+                    data.setLowerBoundary(Double.parseDouble(text));
+                } else {
+                    exit("Введенное число не соответствует паттерну!", 1);
+                }
+            }
+        });
+
+        dTF2.focusedProperty().addListener((arg0, oldValue, newValue) -> {
+            if (!newValue) {
+                String text = dTF2.getText();
+                if (text.matches("[+-]?([0-9]*[.,])?[0-9]+")) {
+                    text = text.replace(",", ".");
+                    data.setLowerBoundary(Double.parseDouble(text));
+                } else {
+                    exit("Введенное число не соответствует паттерну!", 1);
+                }
+            }
+        });*/
     }
 
     @FXML
@@ -80,8 +118,34 @@ public class ObjectChoose implements Initializable {
 
     @FXML
     protected void handleSubmitButtonClick(ActionEvent event) {
+
+        data.setLowerBoundary(validateBoundary(dTF0.getText()));
+        data.setHigherBoundary(validateBoundary(dTF1.getText()));
+        data.setPrecision(validatePrecision(dTF2.getText()));
+
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         loadScene(stage, "result-page.fxml", "solving equations");
     }
+
+    private double validateBoundary(String text) {
+        text = text.replace(",", ".");
+        if (text.matches("[+-]?([0-9]*[.])?[0-9]+")) {
+            return Double.parseDouble(text);
+        } else {
+            exit("Введенное число не соответствует паттерну!", 1);
+            return 0;
+        }
+    }
+
+    private double validatePrecision(String text) {
+        text = text.replace(",", ".");
+        if (text.matches("0[.]0*1")) {
+            return Double.parseDouble(text);
+        } else {
+            exit("Введенное число не соответствует паттерну!", 1);
+            return 0;
+        }
+    }
+
 }
