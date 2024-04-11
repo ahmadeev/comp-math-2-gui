@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ObjectChoose">
-   <Button fx:id="ocB0" layoutX="79.0" layoutY="102.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 1" />
-   <Button fx:id="ocB1" layoutX="200.0" layoutY="102.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 2" />
-   <Button fx:id="ocB2" layoutX="329.0" layoutY="102.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 3" />
-   <Button fx:id="ocB3" layoutX="454.0" layoutY="102.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 4" />
+   <Button fx:id="ocB0" layoutX="79.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 1" />
+   <Button fx:id="ocB1" layoutX="79.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 2" />
+   <Button fx:id="ocB2" layoutX="79.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 3" />
+   <Button fx:id="ocB3" layoutX="79.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="100.0" text="Уравнение 4" />
 
-   <Button fx:id="mcB0" layoutX="79.0" layoutY="185.0" mnemonicParsing="false" onAction="#handleMethodButtonClick" prefHeight="50.0" prefWidth="100.0" text="Метод 1" />
-   <Button fx:id="mcB1" layoutX="200.0" layoutY="185.0" mnemonicParsing="false" onAction="#handleMethodButtonClick" prefHeight="50.0" prefWidth="100.0" text="Метод 2" />
-   <Button fx:id="mcB2" layoutX="329.0" layoutY="185.0" mnemonicParsing="false" onAction="#handleMethodButtonClick" prefHeight="50.0" prefWidth="100.0" text="Метод 3" />
+   <Button fx:id="mcB0" layoutX="79.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleMethodButtonClick" prefHeight="50.0" prefWidth="100.0" text="Метод 1" />
+   <Button fx:id="mcB1" layoutX="79.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleMethodButtonClick" prefHeight="50.0" prefWidth="100.0" text="Метод 2" />
+   <Button fx:id="mcB2" layoutX="79.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleMethodButtonClick" prefHeight="50.0" prefWidth="100.0" text="Метод 3" />
 
-   <TextField fx:id="dTF0" layoutX="79.0" layoutY="275.0" promptText="нижняя граница" />
-   <TextField fx:id="dTF1" layoutX="79.0" layoutY="323.0" promptText="верхняя граница" />
-   <TextField fx:id="dTF2" layoutX="79.0" layoutY="374.0" promptText="точность (формат: 0,01)" />
+   <TextField fx:id="dTF0" layoutX="404.0" layoutY="306.0" promptText="нижняя граница" />
+   <TextField fx:id="dTF1" layoutX="404.0" layoutY="360.0" promptText="верхняя граница" />
+   <TextField fx:id="dTF2" layoutX="404.0" layoutY="411.0" promptText="точность (формат: 0,01)" />
 
-   <Button fx:id="sB" layoutX="79.0" layoutY="433.0" mnemonicParsing="false" onAction="#handleSubmitButtonClick" prefHeight="50.0" prefWidth="100.0" text="Решить" />
+   <Button fx:id="sB" layoutX="250.0" layoutY="515.0" mnemonicParsing="false" onAction="#handleSubmitButtonClick" prefHeight="50.0" prefWidth="100.0" text="Решить" />
+
+   <Label fx:id="ocL0" layoutX="200.0" layoutY="45.0" text="Уравнение 1" />
+   <Label fx:id="ocL1" layoutX="200.0" layoutY="104.0" text="Уравнение 2" />
+   <Label fx:id="ocL2" layoutX="200.0" layoutY="165.0" text="Уравнение 3" />
+   <Label fx:id="ocL3" layoutX="200.0" layoutY="229.0" text="Уравнение 4" />
+
+   <Label fx:id="mcL0" layoutX="200.0" layoutY="301.0" text="Метод 1" />
+   <Label fx:id="mcL1" layoutX="200.0" layoutY="365.0" text="Метод 2" />
+   <Label fx:id="mcL2" layoutX="200.0" layoutY="424.0" text="Метод 3" />
 
 </AnchorPane>
