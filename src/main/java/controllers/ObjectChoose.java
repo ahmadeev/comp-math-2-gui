@@ -12,34 +12,45 @@ import static main.gui.Main.loadScene;
 public class ObjectChoose {
     @FXML
     public Button ocB0, ocB1, ocB2, ocB3;
-
-/*    public int objectNumber = 0;
-
-    public int getObjectNumber() {
-        return objectNumber;
-    }*/
+    @FXML
+    public Button mcB0, mcB1, mcB2;
+    @FXML
+    public Button sB;
 
     @FXML
-    protected void handleButtonClick(ActionEvent event) {
+    protected void handleObjectButtonClick(ActionEvent event) {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
 
         if (event.getSource() == ocB0) {
-//            objectNumber = 1;
             data.setObjectCode(1);
-            loadScene(stage, "result-page.fxml", "solving equations");
         } else if (event.getSource() == ocB1) {
-//            objectNumber = 2;
             data.setObjectCode(2);
-            loadScene(stage, "result-page.fxml", "solving equations");
         } else if (event.getSource() == ocB2) {
-//            objectNumber = 2;
             data.setObjectCode(3);
-            loadScene(stage, "result-page.fxml", "solving equations");
         } else if (event.getSource() == ocB3) {
-//            objectNumber = 2;
             data.setObjectCode(4);
-            loadScene(stage, "result-page.fxml", "solving equations");
         }
+    }
+
+    @FXML
+    protected void handleMethodButtonClick(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        if (event.getSource() == mcB0) {
+            data.setMethodNumber(1);
+        } else if (event.getSource() == ocB1) {
+            data.setMethodNumber(2);
+        } else if (event.getSource() == mcB2) {
+            data.setMethodNumber(3);
+        }
+    }
+
+    @FXML
+    protected void handleSubmitButtonClick(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        loadScene(stage, "result-page.fxml", "solving equations");
     }
 }

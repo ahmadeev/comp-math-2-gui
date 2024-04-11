@@ -20,9 +20,4 @@ public class ResultPage implements Initializable {
         rpL2.setText("methodNumber: " + data.getMethodNumber());
     }
 
-
-
-/*    public ResultPage() {
-        rpL0.setText("" + ModeSelect.programmeMode);
-    }*/
 }
