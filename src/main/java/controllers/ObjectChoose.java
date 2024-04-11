@@ -36,17 +36,23 @@ public class ObjectChoose implements Initializable {
     public Button sB;
     @FXML
     public TextField dTF0, dTF1, dTF2;
+    @FXML
+    public Label chosenObject, chosenMethod;
 
     @FXML
     protected void handleObjectButtonClick(ActionEvent event) {
         if (event.getSource() == ocB0) {
             data.setObjectCode(1);
+            chosenObject.setText("Выбранное уравнение: \n" + EquationOne.EQUATION + "\nКорни уравнения: \n" + EquationOne.ROOTS);
         } else if (event.getSource() == ocB1) {
             data.setObjectCode(2);
+            chosenObject.setText("Выбранное уравнение: \n" + EquationTwo.EQUATION + "\nКорни уравнения: \n" + EquationTwo.ROOTS);
         } else if (event.getSource() == ocB2) {
             data.setObjectCode(3);
+            chosenObject.setText("Выбранное уравнение: \n" + EquationThree.EQUATION + "\nКорни уравнения: \n" + EquationThree.ROOTS);
         } else if (event.getSource() == ocB3) {
             data.setObjectCode(4);
+            chosenObject.setText("Выбранное уравнение: \n" + EquationFour.EQUATION + "\nКорни уравнения: \n" + EquationFour.ROOTS);
         }
     }
 
@@ -54,10 +60,13 @@ public class ObjectChoose implements Initializable {
     protected void handleMethodButtonClick(ActionEvent event) {
         if (event.getSource() == mcB0) {
             data.setMethodNumber(1);
-        } else if (event.getSource() == ocB1) {
+            chosenMethod.setText("Выбранный метод: \n" + "Половинного деления");
+        } else if (event.getSource() == mcB1) {
             data.setMethodNumber(2);
+            chosenMethod.setText("Выбранный метод: \n" + "Ньютона");
         } else if (event.getSource() == mcB2) {
             data.setMethodNumber(3);
+            chosenMethod.setText("Выбранный метод: \n" + "Простой итерации");
         }
     }
 
