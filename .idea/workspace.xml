@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="meow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ModeSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ModeSelect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/mode-select.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/mode-select.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/object-choose.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/object-choose.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712846965147</updated>
       <workItem from="1712846965912" duration="828000" />
-      <workItem from="1712848550010" duration="7613000" />
+      <workItem from="1712848550010" duration="8311000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -91,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712860551745</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="meow">
+      <option name="closed" value="true" />
+      <created>1712861403911</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712861403911</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

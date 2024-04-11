@@ -3,10 +3,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.ResultPage">
-    <Label layoutX="105.0" layoutY="67.0" text="Label" fx:id="rpL0"/>
-    <Label layoutX="105.0" layoutY="121.0" text="Label" fx:id="rpL1"/>
-    <Label layoutX="105.0" layoutY="183.0" text="Label" fx:id="rpL2"/>
+<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultPage">
+    <Label fx:id="rpL0" layoutX="105.0" layoutY="67.0" text="Label" />
+    <Label fx:id="rpL1" layoutX="105.0" layoutY="121.0" text="Label" />
+    <Label fx:id="rpL2" layoutX="105.0" layoutY="183.0" text="Label" />
+   <Label fx:id="rpL3" layoutX="105.0" layoutY="255.0" text="Label" />
+   <Label fx:id="rpL4" layoutX="105.0" layoutY="320.0" text="Label" />
+   <Label fx:id="rpL5" layoutX="105.0" layoutY="383.0" text="Label" />
 </AnchorPane>
