@@ -5,10 +5,7 @@ import javafx.scene.control.Label;
 
 public class ModeSelect {
     @FXML
-    private Label welcomeText;
+    protected void handleButtonClick() {
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
     }
 }
