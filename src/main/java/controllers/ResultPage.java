@@ -16,12 +16,6 @@ import math.equations.*;
 import static math.utils.Utils.exit;
 
 public class ResultPage implements Initializable {
-    @FXML
-    public Label rpL0, rpL1, rpL2;
-    @FXML
-    public Label rpL3, rpL4, rpL5;
-    @FXML
-    public Button showInfoButton;
 
     @FXML
     TableView<MathPOJO> dataTable;
