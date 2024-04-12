@@ -195,7 +195,7 @@ public class Methods {
 
     public static int getNumberOfRoots(Equations equation, double a, double b) {
         int counter = 0;
-        double step = 0.01;
+        double step = 0.001;
 
         double lowerBoundaryValue = equation.getEquationValue(a);
         a += step;
