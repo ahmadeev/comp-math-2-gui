@@ -1,17 +1,6 @@
 package controllers;
 
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
-import math.utils.MathPOJOHalving;
 import math.utils.Methods;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.SplittableRandom;
 
 import math.equations.*;
 

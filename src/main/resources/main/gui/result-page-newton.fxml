@@ -8,15 +8,15 @@
 <AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultPageNewton">
     <TableView fx:id="dataTable" layoutX="90.0" layoutY="56.0" prefHeight="420.0" prefWidth="420.0">
         <columns>
-            <TableColumn fx:id="counter" prefWidth="60" text="counter" />
-            <TableColumn fx:id="prevX" prefWidth="60" text="prevX" />
-            <TableColumn fx:id="prevXValue" prefWidth="60" text="prevXValue" />
-            <TableColumn fx:id="prevXDerValue" prefWidth="60" text="prevXDerValue" />
-            <TableColumn fx:id="x" prefWidth="60" text="x" />
-            <TableColumn fx:id="step" prefWidth="60" text="step" />
+            <TableColumn fx:id="counter" prefWidth="70" text="counter" />
+            <TableColumn fx:id="prevX" prefWidth="70" text="prevX" />
+            <TableColumn fx:id="prevXValue" prefWidth="70" text="prevXValue" />
+            <TableColumn fx:id="prevXDerValue" prefWidth="70" text="prevXDerValue" />
+            <TableColumn fx:id="x" prefWidth="70" text="x" />
+            <TableColumn fx:id="step" prefWidth="70" text="step" />
         </columns>
     </TableView>
     <Button layoutX="136.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleShowInfoButton" prefHeight="50.0" prefWidth="100.0" text="Info" />
     <Button layoutX="250.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleShowInfoButton" prefHeight="50.0" prefWidth="100.0" text="New" />
-    <Button layoutX="370.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleShowInfoButton" prefHeight="50.0" prefWidth="100.0" text="Exit" />
+    <Button layoutX="370.0" layoutY="493.0" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="100.0" text="Exit" />
 </AnchorPane>

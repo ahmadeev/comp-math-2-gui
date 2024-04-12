@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 
 import static main.gui.Main.data;
 
-public class ResultPageIteration implements Initializable {
+public class ResultPageIteration extends ResultController implements Initializable {
     @FXML
     TableView<MathPOJOIteration> dataTable;
     @FXML
@@ -41,23 +41,5 @@ public class ResultPageIteration implements Initializable {
         step.setCellValueFactory(new PropertyValueFactory<MathPOJOIteration, Double>("step"));
 
         dataTable.setItems(Methods.Iteration.iterationData);
-    }
-
-    @FXML
-    private void handleShowInfoButton() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("invocation info");
-        alert.setHeaderText(null);
-
-        String content =
-                "programmeMode: " + data.getProgrammeMode() + "\n" +
-                        "objectCode: " + data.getObjectCode() + "\n" +
-                        "methodNumber: " + data.getMethodNumber() + "\n" +
-                        "lowerBoundary: " + data.getLowerBoundary() + "\n" +
-                        "higherBoundary: " + data.getHigherBoundary() + "\n" +
-                        "precision: " + data.getPrecision() + "\n";
-
-        alert.setContentText(content);
-        alert.showAndWait();
     }
 }

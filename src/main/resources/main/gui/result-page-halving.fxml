@@ -19,5 +19,5 @@
     </TableView>
    <Button layoutX="136.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleShowInfoButton" prefHeight="50.0" prefWidth="100.0" text="Info" />
    <Button layoutX="250.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleShowInfoButton" prefHeight="50.0" prefWidth="100.0" text="New" />
-   <Button layoutX="370.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleShowInfoButton" prefHeight="50.0" prefWidth="100.0" text="Exit" />
+   <Button layoutX="370.0" layoutY="493.0" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="100.0" text="Exit" />
 </AnchorPane>
