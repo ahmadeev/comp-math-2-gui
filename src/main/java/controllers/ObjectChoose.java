@@ -29,7 +29,7 @@ public class ObjectChoose implements Initializable {
     @FXML
     public Button sB;
     @FXML
-    public Label inputErrorLabel;
+    public Label inputErrorLabel, objectErrorLabel, methodErrorLabel;
     @FXML
     public TextField dTF0, dTF1, dTF2;
     @FXML
@@ -72,13 +72,34 @@ public class ObjectChoose implements Initializable {
         String higherBoundary = validateBoundary(dTF1.getText());
         String precision = validatePrecision(dTF2.getText());
 
-        if (!(isNull(lowerBoundary) || isNull(higherBoundary) || isNull(precision))) {
+        boolean flag = true;
+
+        if (data.getObjectCode() == 0) {
+            objectErrorLabel.setText("Уравнение не было выбрано!");
+            flag = false;
+        } else {
+            objectErrorLabel.setText("");
+        }
+
+        if (data.getMethodNumber() == 0) {
+            methodErrorLabel.setText("Метод не был выбран!");
+            flag = false;
+        } else {
+            methodErrorLabel.setText("");
+        }
+
+        if (isNull(lowerBoundary) || isNull(higherBoundary) || isNull(precision)) {
+            inputErrorLabel.setText("Неверный формат входных данных!");
+            flag = false;
+        } else {
+            inputErrorLabel.setText("");
+        }
+
+        if (flag) {
             data.setLowerBoundary(Double.parseDouble(lowerBoundary));
             data.setHigherBoundary(Double.parseDouble(higherBoundary));
             data.setPrecision(Double.parseDouble(precision));
             ResultPage.invokeApp();
-        } else {
-            inputErrorLabel.setText("Неверный формат входных данных!");
         }
     }
 

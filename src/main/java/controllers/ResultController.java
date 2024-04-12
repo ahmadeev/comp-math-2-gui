@@ -18,12 +18,11 @@ public abstract class ResultController {
         alert.setHeaderText(null);
 
         String content =
-                "programmeMode: " + data.getProgrammeMode() + "\n" +
-                        "objectCode: " + data.getObjectCode() + "\n" +
-                        "methodNumber: " + data.getMethodNumber() + "\n" +
-                        "lowerBoundary: " + data.getLowerBoundary() + "\n" +
-                        "higherBoundary: " + data.getHigherBoundary() + "\n" +
-                        "precision: " + data.getPrecision() + "\n";
+                "Режим работы программы: " + data.getProgrammeMode() + "\n" +
+                "Выбранный объект: " + data.getObjectCode() + "\n" +
+                "Номер метода: " + data.getMethodNumber() + "\n" +
+                "Отрезок: [" + data.getLowerBoundary() + ", " + data.getHigherBoundary() + "]\n" +
+                "Точность: " + data.getPrecision() + "\n";
 
         alert.setContentText(content);
         alert.showAndWait();
