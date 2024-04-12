@@ -9,34 +9,34 @@ import static math.utils.Utils.exit;
 
 public class ResultPage {
 
+    public static Equations getEquationByNumber(int objectCode) {
+        switch(objectCode) {
+            case 1: {
+                return new EquationOne();
+            }
+            case 2: {
+                return new EquationTwo();
+            }
+            case 3: {
+                return new EquationThree();
+            }
+            case 4: {
+                return new EquationFour();
+            }
+            default: {
+                exit("Выбранного уравнения не существует!",1);
+                return null;
+            }
+        }
+    }
+
     public static void invokeApp() {
         int programmeMode = data.getProgrammeMode();
         int objectCode = data.getObjectCode();
         int methodNumber = data.getMethodNumber();
 
         if (programmeMode == 1) {
-            Equations equation = null;
-            switch(objectCode) {
-                case 1: {
-                    equation = new EquationOne();
-                    break;
-                }
-                case 2: {
-                    equation = new EquationTwo();
-                    break;
-                }
-                case 3: {
-                    equation = new EquationThree();
-                    break;
-                }
-                case 4: {
-                    equation = new EquationFour();
-                    break;
-                }
-                default: {
-                    exit("Выбранного уравнения не существует!",1);
-                }
-            }
+            Equations equation = getEquationByNumber(objectCode);
 
             double lowerBoundary = 0;
             double higherBoundary = 0;
