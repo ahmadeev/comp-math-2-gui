@@ -25,7 +25,7 @@ public abstract class ResultController {
     }
 
     @FXML
-    public void exit() {
+    public void handleExitButton() {
         System.exit(0);
     }
 }
