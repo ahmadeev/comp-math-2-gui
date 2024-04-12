@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="накодил (нагадил)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPageHalving.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageHalving.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPageIteration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageIteration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPageNewton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageNewton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/utils/Utils.java" afterDir="false" />
+    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="стараюсь">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-halving.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-halving.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-iteration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-iteration.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-newton.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-newton.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +67,7 @@
       <updated>1712846965147</updated>
       <workItem from="1712846965912" duration="828000" />
       <workItem from="1712848550010" duration="16072000" />
-      <workItem from="1712891963588" duration="898000" />
+      <workItem from="1712891963588" duration="1749000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -167,7 +165,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712892473840</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="стараюсь">
+      <option name="closed" value="true" />
+      <created>1712893126731</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712893126731</updated>
+    </task>
+    <task id="LOCAL-00014" summary="стараюсь">
+      <option name="closed" value="true" />
+      <created>1712893192947</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712893192947</updated>
+    </task>
+    <task id="LOCAL-00015" summary="стараюсь">
+      <option name="closed" value="true" />
+      <created>1712893306663</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712893306663</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +209,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="meow" />
     <MESSAGE value="накодил (нагадил)" />
-    <option name="LAST_COMMIT_MESSAGE" value="накодил (нагадил)" />
+    <MESSAGE value="стараюсь" />
+    <option name="LAST_COMMIT_MESSAGE" value="стараюсь" />
   </component>
 </project>

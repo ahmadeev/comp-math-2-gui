@@ -1,9 +1,14 @@
 package controllers;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import utils.InputData;
 
-import static main.gui.Main.data;
+import static main.gui.Main.*;
+import static math.utils.Methods.Halving.halvingData;
+import static math.utils.Methods.Newton.newtonData;
+import static math.utils.Methods.Iteration.iterationData;
 
 public abstract class ResultController {
     @FXML
@@ -25,7 +30,16 @@ public abstract class ResultController {
     }
 
     @FXML
-    public void handleExitButton() {
+    private void handleExitButton() {
         System.exit(0);
+    }
+
+    @FXML
+    private void handleNewButton() {
+        data = new InputData();
+        halvingData = FXCollections.observableArrayList();
+        newtonData = FXCollections.observableArrayList();
+        iterationData = FXCollections.observableArrayList();
+        loadScene(primaryStage, "mode-select.fxml", "solving equations");
     }
 }
