@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="meow">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageHalving.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageIteration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageNewton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/math/utils/MathPOJOIteration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/math/utils/MathPOJONewton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-iteration.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-newton.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/MathPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/utils/MathPOJOHalving.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-halving.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +141,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712881486007</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="meow">
+      <option name="closed" value="true" />
+      <created>1712882482715</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882482715</updated>
+    </task>
+    <task id="LOCAL-00010" summary="meow">
+      <option name="closed" value="true" />
+      <created>1712882721886</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882721886</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

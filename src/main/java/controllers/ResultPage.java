@@ -2,52 +2,25 @@ package controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import math.utils.MathPOJO;
+import javafx.stage.Stage;
+import math.utils.MathPOJOHalving;
 import math.utils.Methods;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.SplittableRandom;
 
-import static main.gui.Main.data;
 import math.equations.*;
 
+import static main.gui.Main.*;
 import static math.utils.Utils.exit;
 
-public class ResultPage implements Initializable {
+public class ResultPage {
 
-    @FXML
-    TableView<MathPOJO> dataTable;
-    @FXML
-    private TableColumn<MathPOJO, Integer> counter;
-    @FXML
-    private TableColumn<MathPOJO, Double> a;
-    @FXML
-    private TableColumn<MathPOJO, Double> b;
-    @FXML
-    private TableColumn<MathPOJO, Double> x;
-    @FXML
-    private TableColumn<MathPOJO, Double> aValue;
-    @FXML
-    private TableColumn<MathPOJO, Double> bValue;
-    @FXML
-    private TableColumn<MathPOJO, Double> step;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        //  важный
-        counter.setCellValueFactory(new PropertyValueFactory<MathPOJO, Integer>("counter"));
-        a.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("a"));
-        b.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("b"));
-        x.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("x"));
-        aValue.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("aValue"));
-        bValue.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("bValue"));
-        step.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("step"));
-
-        dataTable.setItems(Methods.Halving.halvingData);
-
+    public static void invokeApp() {
         int programmeMode = data.getProgrammeMode();
         int objectCode = data.getObjectCode();
         int methodNumber = data.getMethodNumber();
@@ -89,14 +62,17 @@ public class ResultPage implements Initializable {
             switch(methodNumber) {
                 case 1: {
                     Methods.Halving.getRoot(lowerBoundary, higherBoundary, precision, equation);
+                    loadScene(primaryStage, "result-page-halving.fxml","solving equations");
                     break;
                 }
                 case 2: {
                     Methods.Newton.getRoot(lowerBoundary, higherBoundary, precision, equation);
+                    loadScene(primaryStage, "result-page-newton.fxml","solving equations");
                     break;
                 }
                 case 3: {
                     Methods.Iteration.getRoot(lowerBoundary, higherBoundary, precision, equation);
+                    loadScene(primaryStage, "result-page-iteration.fxml","solving equations");
                     break;
                 }
                 default: {
@@ -108,23 +84,5 @@ public class ResultPage implements Initializable {
         } else {
             exit("Выбранного сценария работы программы не существует!",1);
         }
-    }
-
-    @FXML
-    private void handleShowInfoButton() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("invocation info");
-        alert.setHeaderText(null);
-
-        String content =
-                "programmeMode: " + data.getProgrammeMode() + "\n" +
-                "objectCode: " + data.getObjectCode() + "\n" +
-                "methodNumber: " + data.getMethodNumber() + "\n" +
-                "lowerBoundary: " + data.getLowerBoundary() + "\n" +
-                "higherBoundary: " + data.getHigherBoundary() + "\n" +
-                "precision: " + data.getPrecision() + "\n";
-
-        alert.setContentText(content);
-        alert.showAndWait();
     }
 }

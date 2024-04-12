@@ -1,6 +1,6 @@
 package math.utils;
 
-public class MathPOJO {
+public class MathPOJOHalving {
     private int counter;
     private double a;
     private double b;
@@ -9,7 +9,7 @@ public class MathPOJO {
     private double bValue;
     private double step;
 
-    public MathPOJO(int counter, double a, double b, double x, double aValue, double bValue, double step) {
+    public MathPOJOHalving(int counter, double a, double b, double x, double aValue, double bValue, double step) {
         this.counter = counter;
         this.a = a;
         this.b = b;

@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class Main extends Application {
     public static InputData data = new InputData();
+    public static Stage primaryStage;
     public static void loadScene(Stage stage, String resource, String title) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(resource));
@@ -25,8 +26,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        primaryStage = stage;
         loadScene(stage, "mode-select.fxml", "solving equations");
-        //loadScene(stage, "result-page.fxml", "solving equations");
     }
 
     public static void main(String[] args) {

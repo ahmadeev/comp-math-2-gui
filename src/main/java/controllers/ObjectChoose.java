@@ -75,10 +75,7 @@ public class ObjectChoose implements Initializable {
         data.setLowerBoundary(validateBoundary(dTF0.getText()));
         data.setHigherBoundary(validateBoundary(dTF1.getText()));
         data.setPrecision(validatePrecision(dTF2.getText()));
-
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        loadScene(stage, "result-page.fxml", "solving equations");
+        ResultPage.invokeApp();
     }
 
     private double validateBoundary(String text) {

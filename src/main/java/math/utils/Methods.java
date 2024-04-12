@@ -12,7 +12,7 @@ import static math.utils.Utils.exit;
 public class Methods {
 
     public static class Halving {
-        public static ObservableList<MathPOJO> halvingData = FXCollections.observableArrayList();
+        public static ObservableList<MathPOJOHalving> halvingData = FXCollections.observableArrayList();
         public static void getRoot(double a, double b, double precision, Equations equation) {
             if (isNull(equation) || precision == 0) exit("Неверные входные данные!", 1);
             if (getNumberOfRoots(equation, a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
@@ -44,7 +44,7 @@ public class Methods {
                         counter, lowerBoundary, higherBoundary,
                         lowerBoundary + (higherBoundary - lowerBoundary) / 2,
                         lowerBoundaryValue, higherBoundaryValue, abs(lowerBoundary - higherBoundary));
-                halvingData.add(new MathPOJO(counter, lowerBoundary, higherBoundary,
+                halvingData.add(new MathPOJOHalving(counter, lowerBoundary, higherBoundary,
                         lowerBoundary + (higherBoundary - lowerBoundary) / 2,
                         lowerBoundaryValue, higherBoundaryValue, abs(lowerBoundary - higherBoundary)));
             }
@@ -56,6 +56,7 @@ public class Methods {
     }
 
     public static class Newton {
+        public static ObservableList<MathPOJONewton> newtonData = FXCollections.observableArrayList();
         public static void getRoot(double a, double b, double precision, Equations equation) {
             if (isNull(equation) || precision == 0) exit("Неверные входные данные!", 1);
             if (getNumberOfRoots(equation, a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
@@ -76,6 +77,12 @@ public class Methods {
                     previousXDerivativeValue,
                     x,
                     abs(x - previousX));
+            newtonData.add(new MathPOJONewton(counter,
+                    previousX,
+                    previousXValue,
+                    previousXDerivativeValue,
+                    x,
+                    abs(x - previousX)));
             counter++;
 
             while (abs(previousX - x) > precision && abs(previousXValue) > precision) {
@@ -83,7 +90,6 @@ public class Methods {
                 previousXValue = equation.getEquationValue(previousX);
                 previousXDerivativeValue = getDerivative(equation, previousX);
                 x = previousX - previousXValue / previousXDerivativeValue;
-                counter++;
                 System.out.printf("%d.   x_i = %5.2f   f(x_i) = %5.2f   f'(x_i) = %5.2f   x_i+1 = %5.2f   | x_i+1 - x_i | = %5.2f\n",
                         counter,
                         previousX,
@@ -91,6 +97,13 @@ public class Methods {
                         previousXDerivativeValue,
                         x,
                         abs(x - previousX));
+                newtonData.add(new MathPOJONewton(counter,
+                        previousX,
+                        previousXValue,
+                        previousXDerivativeValue,
+                        x,
+                        abs(x - previousX)));
+                counter++;
             }
 
             System.out.println();
@@ -102,7 +115,7 @@ public class Methods {
 
     public static class Iteration {
         public static double lambda;
-
+        public static ObservableList<MathPOJOIteration> iterationData = FXCollections.observableArrayList();
         public static void getRoot(double a, double b, double precision, Equations equation) {
             if (isNull(equation) || precision == 0) exit("Неверные входные данные!", 1);
             if (getNumberOfRoots(equation, a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
@@ -119,6 +132,13 @@ public class Methods {
                     getPhi(equation, x, lambda),
                     equation.getEquationValue(x),
                     abs(x - previousX));
+            iterationData.add(new MathPOJOIteration(
+                    counter,
+                    previousX,
+                    x,
+                    getPhi(equation, x, lambda),
+                    equation.getEquationValue(x),
+                    abs(x - previousX)));
             counter++;
 
             while (abs(x - previousX) > precision) {
@@ -132,7 +152,13 @@ public class Methods {
                         getPhi(equation, x, lambda),
                         equation.getEquationValue(x),
                         abs(x - previousX));
-
+                iterationData.add(new MathPOJOIteration(
+                        counter,
+                        previousX,
+                        x,
+                        getPhi(equation, x, lambda),
+                        equation.getEquationValue(x),
+                        abs(x - previousX)));
                 counter++;
             }
             System.out.println();
