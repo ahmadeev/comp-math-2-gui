@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ObjectChoose">
    <Button fx:id="ocB0" layoutX="79.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="50.0" text="1" />
@@ -36,5 +37,10 @@
 
    <Label fx:id="chosenObject" layoutX="391.0" layoutY="334.0" />
    <Label fx:id="chosenMethod" layoutX="391.0" layoutY="408.0" />
+   <Label fx:id="inputErrorLabel" layoutX="379.0" layoutY="215.0" textFill="#c10000">
+      <font>
+         <Font size="9.0" />
+      </font>
+   </Label>
 
 </AnchorPane>

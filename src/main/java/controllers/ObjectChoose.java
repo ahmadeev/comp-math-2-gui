@@ -1,15 +1,11 @@
 package controllers;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import math.equations.EquationFour;
 import math.equations.EquationOne;
 import math.equations.EquationThree;
@@ -20,8 +16,6 @@ import java.util.ResourceBundle;
 
 import static java.util.Objects.isNull;
 import static main.gui.Main.data;
-import static main.gui.Main.loadScene;
-import static math.utils.Utils.exit;
 
 public class ObjectChoose implements Initializable {
     @FXML
@@ -34,6 +28,8 @@ public class ObjectChoose implements Initializable {
     public Label mcL0, mcL1, mcL2;
     @FXML
     public Button sB;
+    @FXML
+    public Label inputErrorLabel;
     @FXML
     public TextField dTF0, dTF1, dTF2;
     @FXML
@@ -72,29 +68,35 @@ public class ObjectChoose implements Initializable {
 
     @FXML
     protected void handleSubmitButtonClick() {
-        data.setLowerBoundary(validateBoundary(dTF0.getText()));
-        data.setHigherBoundary(validateBoundary(dTF1.getText()));
-        data.setPrecision(validatePrecision(dTF2.getText()));
-        ResultPage.invokeApp();
-    }
+        String lowerBoundary = validateBoundary(dTF0.getText());
+        String higherBoundary = validateBoundary(dTF1.getText());
+        String precision = validatePrecision(dTF2.getText());
 
-    private double validateBoundary(String text) {
-        text = text.replace(",", ".");
-        if (text.matches("[+-]?([0-9]*[.])?[0-9]+")) {
-            return Double.parseDouble(text);
+        if (!(isNull(lowerBoundary) || isNull(higherBoundary) || isNull(precision))) {
+            data.setLowerBoundary(Double.parseDouble(lowerBoundary));
+            data.setHigherBoundary(Double.parseDouble(higherBoundary));
+            data.setPrecision(Double.parseDouble(precision));
+            ResultPage.invokeApp();
         } else {
-            exit("Введенное число не соответствует паттерну!", 1);
-            return 0;
+            inputErrorLabel.setText("Неверный формат входных данных!");
         }
     }
 
-    private double validatePrecision(String text) {
+    private String validateBoundary(String text) {
+        text = text.replace(",", ".");
+        if (text.matches("[+-]?([0-9]*[.])?[0-9]+")) {
+            return text;
+        } else {
+            return null;
+        }
+    }
+
+    private String validatePrecision(String text) {
         text = text.replace(",", ".");
         if (text.matches("0[.]0*1")) {
-            return Double.parseDouble(text);
+            return text;
         } else {
-            exit("Введенное число не соответствует паттерну!", 1);
-            return 0;
+            return null;
         }
     }
 
