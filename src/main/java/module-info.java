@@ -10,5 +10,12 @@ module main.gui {
     opens main.gui to javafx.fxml;
     exports main.gui;
     exports controllers;
+
+    exports math.equations;
+    exports math.utils;
+
     opens controllers to javafx.fxml;
+
+    opens math.utils to java.base;
+    opens math.equations to java.base;
 }

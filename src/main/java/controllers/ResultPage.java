@@ -1,8 +1,15 @@
 package controllers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import math.utils.MathPOJO;
+import math.utils.Person;
 import utils.InputData;
 import math.utils.Methods;
 
@@ -20,6 +27,23 @@ public class ResultPage implements Initializable {
     @FXML
     public Label rpL3, rpL4, rpL5;
 
+    @FXML
+    TableView<MathPOJO> dataTable;
+    @FXML
+    private TableColumn<MathPOJO, Integer> counter;
+    @FXML
+    private TableColumn<MathPOJO, Double> a;
+    @FXML
+    private TableColumn<MathPOJO, Double> b;
+    @FXML
+    private TableColumn<MathPOJO, Double> x;
+    @FXML
+    private TableColumn<MathPOJO, Double> aValue;
+    @FXML
+    private TableColumn<MathPOJO, Double> bValue;
+    @FXML
+    private TableColumn<MathPOJO, Double> step;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rpL0.setText("programmeMode: " + data.getProgrammeMode());
@@ -28,6 +52,17 @@ public class ResultPage implements Initializable {
         rpL3.setText("lowerBoundary: " + data.getLowerBoundary());
         rpL4.setText("higherBoundary: " + data.getHigherBoundary());
         rpL5.setText("precision: " + data.getPrecision());
+
+        //  важный
+        counter.setCellValueFactory(new PropertyValueFactory<MathPOJO, Integer>("counter"));
+        a.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("a"));
+        b.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("b"));
+        x.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("x"));
+        aValue.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("aValue"));
+        bValue.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("bValue"));
+        step.setCellValueFactory(new PropertyValueFactory<MathPOJO, Double>("step"));
+
+        dataTable.setItems(Methods.Halving.halvingData);
 
         int programmeMode = data.getProgrammeMode();
         int objectCode = data.getObjectCode();

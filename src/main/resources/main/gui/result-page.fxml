@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultPage">
@@ -10,4 +12,16 @@
    <Label fx:id="rpL3" layoutX="105.0" layoutY="255.0" text="Label" />
    <Label fx:id="rpL4" layoutX="105.0" layoutY="320.0" text="Label" />
    <Label fx:id="rpL5" layoutX="105.0" layoutY="383.0" text="Label" />
+
+    <TableView fx:id="dataTable" layoutX="300.0" layoutY="64.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="counter" prefWidth="75.0" text="counter" />
+            <TableColumn fx:id="a" prefWidth="75.0" text="a" />
+            <TableColumn fx:id="b" prefWidth="75.0" text="b" />
+            <TableColumn fx:id="x" prefWidth="75.0" text="x" />
+            <TableColumn fx:id="aValue" prefWidth="75.0" text="aValue" />
+            <TableColumn fx:id="bValue" prefWidth="75.0" text="bValue" />
+            <TableColumn fx:id="step" prefWidth="75.0" text="step" />
+        </columns>
+    </TableView>
 </AnchorPane>

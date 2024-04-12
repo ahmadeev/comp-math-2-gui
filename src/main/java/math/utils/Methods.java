@@ -1,5 +1,7 @@
 package math.utils;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import math.equations.Equations;
 
 import static java.lang.Math.abs;
@@ -10,6 +12,7 @@ import static math.utils.Utils.exit;
 public class Methods {
 
     public static class Halving {
+        public static ObservableList<MathPOJO> halvingData = FXCollections.observableArrayList();
         public static void getRoot(double a, double b, double precision, Equations equation) {
             if (isNull(equation) || precision == 0) exit("Неверные входные данные!", 1);
             if (getNumberOfRoots(equation, a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
@@ -41,11 +44,14 @@ public class Methods {
                         counter, lowerBoundary, higherBoundary,
                         lowerBoundary + (higherBoundary - lowerBoundary) / 2,
                         lowerBoundaryValue, higherBoundaryValue, abs(lowerBoundary - higherBoundary));
+                halvingData.add(new MathPOJO(counter, lowerBoundary, higherBoundary,
+                        lowerBoundary + (higherBoundary - lowerBoundary) / 2,
+                        lowerBoundaryValue, higherBoundaryValue, abs(lowerBoundary - higherBoundary)));
             }
             System.out.println();
             System.out.printf("После %d итераций корень уравнения равен %f с точностью %f.\n",
                     reps, lowerBoundary + (higherBoundary - lowerBoundary) / 2, precision);
-            System.out.printf("Уравнение имеет корни: %s", equation.getExpectedRoots());
+            System.out.printf("Уравнение имеет корни: %s\n", equation.getExpectedRoots());
         }
     }
 
@@ -90,7 +96,7 @@ public class Methods {
             System.out.println();
             System.out.printf("После %d итераций корень уравнения равен %f с точностью %f.\n",
                     counter, x, precision);
-            System.out.printf("Уравнение имеет корни: %s", equation.getExpectedRoots());
+            System.out.printf("Уравнение имеет корни: %s\n", equation.getExpectedRoots());
         }
     }
 
@@ -132,7 +138,7 @@ public class Methods {
             System.out.println();
             System.out.printf("После %d итераций корень уравнения равен %f с точностью %f.\n",
                     counter, x, precision);
-            System.out.printf("Уравнение имеет корни: %s", equation.getExpectedRoots());
+            System.out.printf("Уравнение имеет корни: %s\n", equation.getExpectedRoots());
         }
 
         public static double getLambda(Equations equation, double x, double a, double b) {
