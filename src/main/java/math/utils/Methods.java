@@ -30,15 +30,16 @@ public class Methods {
                 center = lowerBoundary + (higherBoundary - lowerBoundary) / 2;
                 centerValue = equation.getEquationValue(center);
 
-                if (lowerBoundaryValue < 0 && centerValue >= 0) {
+                if ((lowerBoundaryValue < 0 && centerValue >= 0) || (lowerBoundaryValue >= 0 && centerValue < 0)) {
                     higherBoundary = center;
                     higherBoundaryValue = equation.getEquationValue(higherBoundary);
-                } else if (centerValue < 0 && higherBoundaryValue >= 0) {
+                } else if ((centerValue >= 0 && higherBoundaryValue < 0) || (centerValue < 0 && higherBoundaryValue >= 0)) {
                     lowerBoundary = center;
                     lowerBoundaryValue = equation.getEquationValue(lowerBoundary);
                 } else {
                     exit("Что-то пошло не так при решении уравнения!", 1);
                 }
+
                 counter++;
                 System.out.printf("%d.   a = %5.2f   b = %5.2f   x = %5.2f   f(a) = %5.2f   f(b) = %5.2f   |a - b| = %5.2f\n",
                         counter, lowerBoundary, higherBoundary,
