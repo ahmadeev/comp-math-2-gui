@@ -71,7 +71,7 @@ public class ObjectChoose implements Initializable {
     }
 
     @FXML
-    protected void handleSubmitButtonClick(ActionEvent event) {
+    protected void handleSubmitButtonClick() {
         data.setLowerBoundary(validateBoundary(dTF0.getText()));
         data.setHigherBoundary(validateBoundary(dTF1.getText()));
         data.setPrecision(validatePrecision(dTF2.getText()));
