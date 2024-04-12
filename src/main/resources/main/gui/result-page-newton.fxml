@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultPageNewton">
+<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.single.ResultPageNewton">
     <TableView fx:id="dataTable" layoutX="90.0" layoutY="56.0" prefHeight="420.0" prefWidth="420.0">
         <columns>
             <TableColumn fx:id="counter" prefWidth="70" text="counter" />

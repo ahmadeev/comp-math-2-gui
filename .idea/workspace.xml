@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="тут кое-что поменялось&#10;(глючит ньютон с синусами)" />
+    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="тут кое-что поменялось&#10;(глючит ньютон с синусами)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/single/ResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/single/ResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPageHalving.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/single/ResultPageHalving.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPageIteration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/single/ResultPageIteration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPageNewton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/single/ResultPageNewton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-halving.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-halving.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-iteration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-iteration.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-newton.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-newton.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +74,7 @@
       <workItem from="1712846965912" duration="828000" />
       <workItem from="1712848550010" duration="16072000" />
       <workItem from="1712891963588" duration="3602000" />
-      <workItem from="1712935661290" duration="2259000" />
+      <workItem from="1712935661290" duration="3040000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -208,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712937738026</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="тут кое-что поменялось&#10;(глючит ньютон с синусами)">
+      <option name="closed" value="true" />
+      <created>1712938192109</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712938192109</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

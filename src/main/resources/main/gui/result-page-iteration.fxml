@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultPageIteration">
+<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.single.ResultPageIteration">
 <TableView fx:id="dataTable" layoutX="90.0" layoutY="56.0" prefHeight="420.0" prefWidth="420.0">
     <columns>
         <TableColumn fx:id="counter" prefWidth="70" text="counter" />
