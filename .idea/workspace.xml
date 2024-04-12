@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="meow">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageHalving.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageIteration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPageNewton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/math/utils/MathPOJOIteration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/math/utils/MathPOJONewton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-iteration.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-newton.fxml" afterDir="false" />
+    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="накодил (нагадил)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/MathPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/utils/MathPOJOHalving.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-halving.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-halving.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-halving.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-iteration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-iteration.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-newton.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/result-page-newton.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +66,7 @@
       <updated>1712846965147</updated>
       <workItem from="1712846965912" duration="828000" />
       <workItem from="1712848550010" duration="16072000" />
+      <workItem from="1712891963588" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -157,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712882721886</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="накодил (нагадил)">
+      <option name="closed" value="true" />
+      <created>1712886398373</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712886398373</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +175,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="meow" />
-    <option name="LAST_COMMIT_MESSAGE" value="meow" />
+    <MESSAGE value="накодил (нагадил)" />
+    <option name="LAST_COMMIT_MESSAGE" value="накодил (нагадил)" />
   </component>
 </project>
