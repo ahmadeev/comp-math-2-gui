@@ -40,10 +40,7 @@ public class Methods {
                 }
 
                 counter++;
-                System.out.printf("%d.   a = %5.2f   b = %5.2f   x = %5.2f   f(a) = %5.2f   f(b) = %5.2f   |a - b| = %5.2f\n",
-                        counter, lowerBoundary, higherBoundary,
-                        lowerBoundary + (higherBoundary - lowerBoundary) / 2,
-                        lowerBoundaryValue, higherBoundaryValue, abs(lowerBoundary - higherBoundary));
+                printStepResult(counter, lowerBoundary, higherBoundary, lowerBoundaryValue, higherBoundaryValue);
                 halvingData.add(new MathPOJOHalving(counter, lowerBoundary, higherBoundary,
                         lowerBoundary + (higherBoundary - lowerBoundary) / 2,
                         lowerBoundaryValue, higherBoundaryValue, abs(lowerBoundary - higherBoundary)));
@@ -52,6 +49,13 @@ public class Methods {
             System.out.printf("После %d итераций корень уравнения равен %f с точностью %f.\n",
                     reps, lowerBoundary + (higherBoundary - lowerBoundary) / 2, precision);
             System.out.printf("Уравнение имеет корни: %s\n", equation.getExpectedRoots());
+        }
+
+        public static void printStepResult(int counter, double lowerBoundary, double higherBoundary, double lowerBoundaryValue, double higherBoundaryValue) {
+            System.out.printf("%d.   a = %5.2f   b = %5.2f   x = %5.2f   f(a) = %5.2f   f(b) = %5.2f   |a - b| = %5.2f\n",
+                    counter, lowerBoundary, higherBoundary,
+                    lowerBoundary + (higherBoundary - lowerBoundary) / 2,
+                    lowerBoundaryValue, higherBoundaryValue, abs(lowerBoundary - higherBoundary));
         }
     }
 
@@ -70,13 +74,7 @@ public class Methods {
             double previousXValue = equation.getEquationValue(previousX);
             double previousXDerivativeValue = getDerivative(equation, previousX);
             double x = previousX - previousXValue / previousXDerivativeValue;
-            System.out.printf("%d.   x_i = %5.2f   f(x_i) = %5.2f   f'(x_i) = %5.2f   x_i+1 = %5.2f   | x_i+1 - x_i | = %5.2f\n",
-                    counter,
-                    previousX,
-                    previousXValue,
-                    previousXDerivativeValue,
-                    x,
-                    abs(x - previousX));
+            printStepResult(counter, previousX, previousXValue, previousXDerivativeValue, x);
             newtonData.add(new MathPOJONewton(counter,
                     previousX,
                     previousXValue,
@@ -90,13 +88,7 @@ public class Methods {
                 previousXValue = equation.getEquationValue(previousX);
                 previousXDerivativeValue = getDerivative(equation, previousX);
                 x = previousX - previousXValue / previousXDerivativeValue;
-                System.out.printf("%d.   x_i = %5.2f   f(x_i) = %5.2f   f'(x_i) = %5.2f   x_i+1 = %5.2f   | x_i+1 - x_i | = %5.2f\n",
-                        counter,
-                        previousX,
-                        previousXValue,
-                        previousXDerivativeValue,
-                        x,
-                        abs(x - previousX));
+                printStepResult(counter, previousX, previousXValue, previousXDerivativeValue, x);
                 newtonData.add(new MathPOJONewton(counter,
                         previousX,
                         previousXValue,
@@ -111,6 +103,16 @@ public class Methods {
                     counter, x, precision);
             System.out.printf("Уравнение имеет корни: %s\n", equation.getExpectedRoots());
         }
+
+        public static void printStepResult(int counter, double previousX, double previousXValue, double previousXDerivativeValue, double x) {
+            System.out.printf("%d.   x_i = %5.2f   f(x_i) = %5.2f   f'(x_i) = %5.2f   x_i+1 = %5.2f   | x_i+1 - x_i | = %5.2f\n",
+                    counter,
+                    previousX,
+                    previousXValue,
+                    previousXDerivativeValue,
+                    x,
+                    abs(x - previousX));
+        }
     }
 
     public static class Iteration {
@@ -122,16 +124,9 @@ public class Methods {
             double previousX;
             if (getDerivative(equation, a) > getDerivative(equation, b)) { previousX = a; } else { previousX = b; }
             lambda = getLambda(equation, previousX, a, b);
-            //System.out.println(lambda);
             double x = getPhi(equation, previousX, lambda);
             int counter = 0;
-            System.out.printf("%d.   x_i = %5.2f   x_i+1 = %5.2f   phi(x_i+1) = %5.2f   f(x_i+1) = %5.2f   | x_i+1 - x_i | = %5.2f\n",
-                    counter,
-                    previousX,
-                    x,
-                    getPhi(equation, x, lambda),
-                    equation.getEquationValue(x),
-                    abs(x - previousX));
+            printStepResult(counter, previousX, x, equation);
             iterationData.add(new MathPOJOIteration(
                     counter,
                     previousX,
@@ -145,13 +140,7 @@ public class Methods {
                 previousX = x;
                 x = getPhi(equation, previousX, lambda);
 
-                System.out.printf("%d.   x_i = %5.2f   x_i+1 = %5.2f   phi(x_i+1) = %5.2f   f(x_i+1) = %5.2f   | x_i+1 - x_i | = %5.2f\n",
-                        counter,
-                        previousX,
-                        x,
-                        getPhi(equation, x, lambda),
-                        equation.getEquationValue(x),
-                        abs(x - previousX));
+                printStepResult(counter, previousX, x, equation);
                 iterationData.add(new MathPOJOIteration(
                         counter,
                         previousX,
@@ -170,12 +159,21 @@ public class Methods {
         public static double getLambda(Equations equation, double x, double a, double b) {
             double maxDerivative = Math.max(abs(getDerivative(equation, a)), abs(getDerivative(equation, b)));
             double sign = (getDerivative(equation, a) > 0 && getDerivative(equation, b) > 0) ? -1 : 1;
-            //System.out.println(sign);
             return sign / maxDerivative;
         }
 
         public static double getPhi(Equations equation, double x, double lambda) {
             return (x + lambda * equation.getEquationValue(x));
+        }
+
+        public static void printStepResult(int counter, double previousX, double x, Equations equation) {
+            System.out.printf("%d.   x_i = %5.2f   x_i+1 = %5.2f   phi(x_i+1) = %5.2f   f(x_i+1) = %5.2f   | x_i+1 - x_i | = %5.2f\n",
+                    counter,
+                    previousX,
+                    x,
+                    getPhi(equation, x, lambda),
+                    equation.getEquationValue(x),
+                    abs(x - previousX));
         }
     }
 
