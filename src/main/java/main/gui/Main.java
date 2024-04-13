@@ -28,6 +28,9 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
         loadScene(stage, "mode-select.fxml", "solving equations");
+
+/*        Stage graph = new Stage();
+        loadScene(graph, "mode-select.fxml", "solving equations");*/
     }
 
     public static void main(String[] args) {

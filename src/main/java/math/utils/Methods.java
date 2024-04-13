@@ -15,7 +15,6 @@ public class Methods {
         public static ObservableList<MathPOJOHalving> halvingData = FXCollections.observableArrayList();
         public static void getRoot(double a, double b, double precision, Equations equation) {
             if (isNull(equation) || precision == 0) exit("Неверные входные данные!", 1);
-            if (getNumberOfRoots(equation, a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
 
             double lowerBoundary = a;
             double higherBoundary = b;
@@ -63,10 +62,10 @@ public class Methods {
             if (getNumberOfRoots(equation, a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
 
             int counter = 0;
-            double previousX = a;
+            double previousX = b;
 
-            if (equation.getEquationValue(a) * getSecondDerivative(equation, a) > 0) previousX = a;
-            else if (equation.getEquationValue(b) * getSecondDerivative(equation, b) > 0) previousX = b;
+            if (equation.getEquationValue(a) * getSecondDerivative(equation, a) > 0
+                    && equation.getEquationValue(b) * getSecondDerivative(equation, b) < 0) previousX = a;
 
             double previousXValue = equation.getEquationValue(previousX);
             double previousXDerivativeValue = getDerivative(equation, previousX);

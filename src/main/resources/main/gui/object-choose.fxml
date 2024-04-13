@@ -19,7 +19,7 @@
    <TextField fx:id="dTF1" layoutX="379.0" layoutY="117.0" promptText="верхняя граница" />
    <TextField fx:id="dTF2" layoutX="379.0" layoutY="168.0" promptText="точность (формат: 0,01)" />
 
-   <Button fx:id="sB" layoutX="250.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleSubmitButtonClick" prefHeight="50.0" prefWidth="100.0" text="Решить" />
+   <Button fx:id="sB" layoutX="250.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleSubmitButtonClick" prefHeight="50.0" prefWidth="100.0" text="Решить" />
 
    <Label fx:id="ocL0" layoutX="152.0" layoutY="70.0" text="Уравнение 1" />
    <Label fx:id="ocL1" layoutX="152.0" layoutY="129.0" text="Уравнение 2" />
@@ -40,5 +40,6 @@
    <Label fx:id="inputErrorLabel" layoutX="379.0" layoutY="215.0" textFill="#c10000" />
    <Label fx:id="objectErrorLabel" layoutX="208.0" layoutY="23.0" textFill="#c10000" />
    <Label fx:id="methodErrorLabel" layoutX="236.0" layoutY="308.0" textFill="#c10000" />
+   <Label fx:id="otherErrorsLabel" layoutX="284.0" layoutY="508.0" textFill="#c10000" />
 
 </AnchorPane>

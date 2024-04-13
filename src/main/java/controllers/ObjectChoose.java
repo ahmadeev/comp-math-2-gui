@@ -7,16 +7,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import math.equations.EquationFour;
-import math.equations.EquationOne;
-import math.equations.EquationThree;
-import math.equations.EquationTwo;
+import math.equations.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static controllers.single.ResultPage.getEquationByNumber;
 import static java.util.Objects.isNull;
 import static main.gui.Main.data;
+import static math.utils.Methods.getDerivative;
+import static math.utils.Methods.getNumberOfRoots;
+import static math.utils.Utils.exit;
 
 public class ObjectChoose implements Initializable {
     @FXML
@@ -30,7 +31,7 @@ public class ObjectChoose implements Initializable {
     @FXML
     public Button sB;
     @FXML
-    public Label inputErrorLabel, objectErrorLabel, methodErrorLabel;
+    public Label inputErrorLabel, objectErrorLabel, methodErrorLabel, otherErrorsLabel;
     @FXML
     public TextField dTF0, dTF1, dTF2;
     @FXML
@@ -69,6 +70,8 @@ public class ObjectChoose implements Initializable {
 
     @FXML
     protected void handleSubmitButtonClick() {
+        String message = "";
+
         String lowerBoundary = validateBoundary(dTF0.getText());
         String higherBoundary = validateBoundary(dTF1.getText());
         String precision = validatePrecision(dTF2.getText());
@@ -96,10 +99,43 @@ public class ObjectChoose implements Initializable {
             inputErrorLabel.setText("");
         }
 
+        Equations equation = null;
         if (flag) {
+            equation = getEquationByNumber(data.getObjectCode());
             data.setLowerBoundary(Double.parseDouble(lowerBoundary));
             data.setHigherBoundary(Double.parseDouble(higherBoundary));
             data.setPrecision(Double.parseDouble(precision));
+        }
+
+        if (flag && !isNull(equation)) {
+            if (getNumberOfRoots(equation, data.getLowerBoundary(), data.getHigherBoundary()) != 1) {
+                message += "Уравнение на отрезке имеет больше одного корня или не имеет корней совсем!\n";
+                flag = false;
+            }
+        }
+
+/*        if (flag && !isNull(equation) && data.getMethodNumber() == 1) {
+            double lowerBoundaryValue = equation.getEquationValue(data.getLowerBoundary());
+            double higherBoundaryValue = equation.getEquationValue(data.getHigherBoundary());
+            if (!(lowerBoundaryValue < 0 && higherBoundaryValue >= 0)
+                    && !(lowerBoundaryValue >= 0 && higherBoundaryValue < 0)) {
+                message += "Значения функции должны быть разных знаков на границах отрезка!\n";
+                flag = false;
+            }
+        }*/
+
+        otherErrorsLabel.setText(message);
+
+/*        if (flag) {
+            Equations equation = getEquationByNumber(data.getObjectCode());
+            if (!(getDerivative(equation, data.getLowerBoundary()) * getDerivative(equation, data.getHigherBoundary()) > 0)) {
+                //exit("Производные на концах отрезка разных знаков!", 1);
+                System.out.println("meow meow meow");
+                flag = false;
+            }
+        }*/
+
+        if (flag) {
             ResultPage.invokeApp();
         }
     }
