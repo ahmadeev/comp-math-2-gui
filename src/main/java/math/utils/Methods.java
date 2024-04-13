@@ -63,16 +63,16 @@ public class Methods {
         public static ObservableList<MathPOJONewton> newtonData = FXCollections.observableArrayList();
         public static void getRoot(double a, double b, double precision, Equations equation) {
             if (isNull(equation) || precision == 0) exit("Неверные входные данные!", 1);
-            if (getNumberOfRoots(equation, a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
+            if (equation.getNumberOfRoots(a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
 
             int counter = 0;
             double previousX = b;
 
-            if (equation.getEquationValue(a) * getSecondDerivative(equation, a) > 0
-                    && equation.getEquationValue(b) * getSecondDerivative(equation, b) < 0) previousX = a;
+            if (equation.getEquationValue(a) * equation.getSecondDerivative(a) > 0
+                    && equation.getEquationValue(b) * equation.getSecondDerivative(b) < 0) previousX = a;
 
             double previousXValue = equation.getEquationValue(previousX);
-            double previousXDerivativeValue = getDerivative(equation, previousX);
+            double previousXDerivativeValue = equation.getDerivative(previousX);
             double x = previousX - previousXValue / previousXDerivativeValue;
             printStepResult(counter, previousX, previousXValue, previousXDerivativeValue, x);
             newtonData.add(new MathPOJONewton(counter,
@@ -86,7 +86,7 @@ public class Methods {
             while (abs(previousX - x) > precision && abs(previousXValue) > precision) {
                 previousX = x;
                 previousXValue = equation.getEquationValue(previousX);
-                previousXDerivativeValue = getDerivative(equation, previousX);
+                previousXDerivativeValue = equation.getDerivative(previousX);
                 x = previousX - previousXValue / previousXDerivativeValue;
                 printStepResult(counter, previousX, previousXValue, previousXDerivativeValue, x);
                 newtonData.add(new MathPOJONewton(counter,
@@ -120,9 +120,9 @@ public class Methods {
         public static ObservableList<MathPOJOIteration> iterationData = FXCollections.observableArrayList();
         public static void getRoot(double a, double b, double precision, Equations equation) {
             if (isNull(equation) || precision == 0) exit("Неверные входные данные!", 1);
-            if (getNumberOfRoots(equation, a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
+            if (equation.getNumberOfRoots(a, b) != 1) exit("Уравнение имеет больше одного корня на отрезке или не имеет корней совсем!", 1);
             double previousX;
-            if (getDerivative(equation, a) > getDerivative(equation, b)) { previousX = a; } else { previousX = b; }
+            if (equation.getDerivative(a) > equation.getDerivative(b)) { previousX = a; } else { previousX = b; }
             lambda = getLambda(equation, previousX, a, b);
             double x = getPhi(equation, previousX, lambda);
             int counter = 0;
@@ -157,8 +157,8 @@ public class Methods {
         }
 
         public static double getLambda(Equations equation, double x, double a, double b) {
-            double maxDerivative = Math.max(abs(getDerivative(equation, a)), abs(getDerivative(equation, b)));
-            double sign = (getDerivative(equation, a) > 0 && getDerivative(equation, b) > 0) ? -1 : 1;
+            double maxDerivative = Math.max(abs(equation.getDerivative(a)), abs(equation.getDerivative(b)));
+            double sign = (equation.getDerivative(a) > 0 && equation.getDerivative(b) > 0) ? -1 : 1;
             return sign / maxDerivative;
         }
 
@@ -175,40 +175,5 @@ public class Methods {
                     equation.getEquationValue(x),
                     abs(x - previousX));
         }
-    }
-
-    public static double getDerivative(Equations equation, double x) {
-        if (isNull(equation)) exit("", 1);
-        double deltaX = 1.0e-3;
-        return ((equation.getEquationValue(x + deltaX) - equation.getEquationValue(x)) / deltaX);
-    }
-
-    public static double getSecondDerivative(Equations equation, double x) {
-        if (isNull(equation)) exit("", 1);
-        double deltaX = 1.0e-3;
-        return (equation.getEquationValue(x + deltaX) - 2 * equation.getEquationValue(x) + equation.getEquationValue(x - deltaX))
-                / (deltaX * deltaX);
-    }
-
-    public static int getNumberOfRoots(Equations equation, double a, double b) {
-        int counter = 0;
-        double step = 0.001;
-
-        double lowerBoundaryValue = equation.getEquationValue(a);
-        a += step;
-        double higherBoundaryValue = equation.getEquationValue(a);
-        if ((lowerBoundaryValue < 0 && higherBoundaryValue >= 0) || (lowerBoundaryValue >= 0 && higherBoundaryValue < 0))
-            counter++;
-
-        while (a <= b) {
-            lowerBoundaryValue = higherBoundaryValue;
-            higherBoundaryValue = equation.getEquationValue(a);
-            if ((lowerBoundaryValue < 0 && higherBoundaryValue >= 0) || (lowerBoundaryValue >= 0 && higherBoundaryValue < 0))
-                counter++;
-
-            a += step;
-        }
-
-        return counter;
     }
 }

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="глобально">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/Equations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/Equations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/object-choose.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/object-choose.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
       <workItem from="1712891963588" duration="3602000" />
       <workItem from="1712935661290" duration="8476000" />
       <workItem from="1712951391122" duration="4836000" />
-      <workItem from="1712960562786" duration="3354000" />
+      <workItem from="1712960562786" duration="4478000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -256,7 +254,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712953190019</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="глобально">
+      <option name="closed" value="true" />
+      <created>1713045098964</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1713045098964</updated>
+    </task>
+    <task id="LOCAL-00025" summary="глобально">
+      <option name="closed" value="true" />
+      <created>1713045582434</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1713045582434</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

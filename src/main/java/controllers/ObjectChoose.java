@@ -15,9 +15,6 @@ import java.util.ResourceBundle;
 import static controllers.single.ResultPage.getEquationByNumber;
 import static java.util.Objects.isNull;
 import static main.gui.Main.data;
-import static math.utils.Methods.getDerivative;
-import static math.utils.Methods.getNumberOfRoots;
-import static math.utils.Utils.exit;
 
 public class ObjectChoose implements Initializable {
     @FXML
@@ -108,7 +105,7 @@ public class ObjectChoose implements Initializable {
         }
 
         if (flag && !isNull(equation)) {
-            if (getNumberOfRoots(equation, data.getLowerBoundary(), data.getHigherBoundary()) != 1) {
+            if (equation.getNumberOfRoots(data.getLowerBoundary(), data.getHigherBoundary()) != 1) {
                 message += "Уравнение на отрезке имеет больше одного корня или не имеет корней совсем!\n";
                 flag = false;
             }
