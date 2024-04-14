@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="б">
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Blank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Blank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main/gui/blank.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/gui/blank.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/single/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/single/ResultController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
       <workItem from="1712891963588" duration="3602000" />
       <workItem from="1712935661290" duration="8476000" />
       <workItem from="1712951391122" duration="4836000" />
-      <workItem from="1712960562786" duration="15353000" />
+      <workItem from="1712960562786" duration="15698000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -301,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713057578052</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="б">
+      <option name="closed" value="true" />
+      <created>1713057928702</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1713057928702</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

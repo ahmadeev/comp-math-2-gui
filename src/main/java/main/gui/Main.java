@@ -2,12 +2,8 @@ package main.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
-import math.equations.*;
-import math.equations.Equations;
 import utils.InputData;
 
 import java.io.IOException;

@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static controllers.single.ResultPage.getEquationByNumber;
+import static java.util.Objects.isNull;
 import static main.gui.Main.data;
 import static math.utils.Utils.exit;
 
@@ -19,21 +20,31 @@ public class Blank implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        double a = data.getLowerBoundary();
-        double b = data.getHigherBoundary();
-        double step = data.getPrecision();
+        if (data.getProgrammeMode() == 1) {
+            double a = data.getLowerBoundary();
+            double b = data.getHigherBoundary();
+            double step = data.getPrecision();
 
-        Equations equation = getEquationByNumber(data.getObjectCode());
+            Equations equation = getEquationByNumber(data.getObjectCode());
 
-        XYChart.Series<Number, Number> series = new XYChart.Series<>();
-        //series.setName("Функция");
+            XYChart.Series<Number, Number> series = new XYChart.Series<>();
+            //series.setName("Функция");
 
-        while (b > a) {
-            if (equation == null) exit("", 1);
-            series.getData().add(new XYChart.Data<>(a, equation.getEquationValue(a)));
-            a += step;
+            while (b > a) {
+                if (isNull(equation)) {
+                    exit("", 1);
+                    break;
+                }
+                series.getData().add(new XYChart.Data<>(a, equation.getEquationValue(a)));
+                a += step;
+            }
+            graph.setCreateSymbols(false);
+            graph.getData().add(series);
+        } else if (data.getProgrammeMode() == 2) {
+
+        } else {
+            exit("", 1);
         }
-        graph.setCreateSymbols(false);
-        graph.getData().add(series);
+
     }
 }

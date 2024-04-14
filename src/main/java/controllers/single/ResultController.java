@@ -3,6 +3,7 @@ package controllers.single;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 import utils.InputData;
 
 import static main.gui.Main.*;
@@ -39,6 +40,8 @@ public abstract class ResultController {
         halvingData = FXCollections.observableArrayList();
         newtonData = FXCollections.observableArrayList();
         iterationData = FXCollections.observableArrayList();
+        graphStage.close();
+        graphStage = new Stage();
         loadScene(primaryStage, "mode-select.fxml", "solving equations");
     }
 }
