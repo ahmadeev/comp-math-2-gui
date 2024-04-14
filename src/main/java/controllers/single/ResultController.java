@@ -10,11 +10,12 @@ import static main.gui.Main.*;
 import static math.utils.Methods.Halving.halvingData;
 import static math.utils.Methods.Newton.newtonData;
 import static math.utils.Methods.Iteration.iterationData;
+import static math.utils.Utils.showAlert;
 
 public abstract class ResultController {
     @FXML
     private void handleShowInfoButton() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+/*        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("invocation info");
         alert.setHeaderText(null);
 
@@ -26,7 +27,14 @@ public abstract class ResultController {
                 "Точность: " + data.getPrecision() + "\n";
 
         alert.setContentText(content);
-        alert.showAndWait();
+        alert.showAndWait();*/
+
+        String message = "Режим работы программы: " + data.getProgrammeMode() + "\n" +
+                "Выбранный объект: " + data.getObjectCode() + "\n" +
+                "Номер метода: " + data.getMethodNumber() + "\n" +
+                "Отрезок: [" + data.getLowerBoundary() + ", " + data.getHigherBoundary() + "]\n" +
+                "Точность: " + data.getPrecision() + "\n";
+        showAlert(Alert.AlertType.INFORMATION, "invocation info", message);
     }
 
     @FXML

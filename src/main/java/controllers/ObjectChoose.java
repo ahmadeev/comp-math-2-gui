@@ -4,6 +4,7 @@ import controllers.single.ResultPage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -15,6 +16,7 @@ import java.util.ResourceBundle;
 import static controllers.single.ResultPage.getEquationByNumber;
 import static java.util.Objects.isNull;
 import static main.gui.Main.data;
+import static math.utils.Utils.showAlert;
 
 public class ObjectChoose implements Initializable {
     @FXML
@@ -106,7 +108,7 @@ public class ObjectChoose implements Initializable {
 
         if (flag && !isNull(equation)) {
             if (equation.getNumberOfRoots(data.getLowerBoundary(), data.getHigherBoundary()) != 1) {
-                message += "Уравнение на отрезке имеет больше одного корня или не имеет корней совсем!\n";
+                message = "Уравнение на отрезке имеет больше одного корня или не имеет корней совсем!";
                 flag = false;
             }
         }
@@ -116,12 +118,13 @@ public class ObjectChoose implements Initializable {
             double higherBoundaryValue = equation.getEquationValue(data.getHigherBoundary());
             if (!(lowerBoundaryValue < 0 && higherBoundaryValue >= 0)
                     && !(lowerBoundaryValue >= 0 && higherBoundaryValue < 0)) {
-                message += "Значения функции должны быть разных знаков на границах отрезка!\n";
+                message = "Значения функции должны быть разных знаков на границах отрезка!";
                 flag = false;
             }
         }*/
 
-        otherErrorsLabel.setText(message);
+        //otherErrorsLabel.setText(message);
+        if (!flag) showAlert(Alert.AlertType.ERROR, "error!", message);
 
 /*        if (flag) {
             Equations equation = getEquationByNumber(data.getObjectCode());
