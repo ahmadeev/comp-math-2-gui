@@ -6,6 +6,11 @@ public class EquationThree extends Equations {
 
     public EquationThree() {}
 
+/*    @Override
+    public double getDerivative(double x) {
+        return (50 * Math.pow(x, 4) + 2 * x - 1 + 2 * Math.exp(x));
+    }*/
+
     @Override
     public double getEquationValue(double x) {
         return (10 * Math.pow(x, 5) + Math.pow(x, 2) - x + 2 * Math.exp(x));
