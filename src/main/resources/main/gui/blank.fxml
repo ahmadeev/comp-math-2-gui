@@ -4,16 +4,14 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Blank">
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.Blank">
-
-    <LineChart fx:id="graph" layoutX="50.0" layoutY="100.0" title="График функции">
+    <LineChart fx:id="graph" layoutX="50.0" layoutY="100.0" legendVisible="false" title="График функции">
       <xAxis>
-          <NumberAxis side="BOTTOM"/>
+          <NumberAxis side="BOTTOM" />
       </xAxis>
       <yAxis>
-          <NumberAxis side="LEFT"/>
+          <NumberAxis side="LEFT" />
       </yAxis>
     </LineChart>
 

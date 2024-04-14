@@ -33,7 +33,7 @@ public class Blank implements Initializable {
             series.getData().add(new XYChart.Data<>(a, equation.getEquationValue(a)));
             a += step;
         }
-
+        graph.setCreateSymbols(false);
         graph.getData().add(series);
     }
 }
