@@ -41,8 +41,12 @@ public class Main extends Application {
         Equations equation = new EquationOne();
 
         Group graphGroup = new Group();
-        getAxis(graphGroup, WIDTH, HEIGHT);
-        getPlot(graphGroup, equation, WIDTH, HEIGHT, -6, 1);
+
+/*        getAxis(graphGroup, WIDTH, HEIGHT, -1.76, -2, -1);
+        getPlot(graphGroup, equation, WIDTH, HEIGHT, -1.76, -2, -1);*/
+
+        getAxis(graphGroup, WIDTH, HEIGHT, 5, -15, 10);
+        getPlot(graphGroup, equation, WIDTH, HEIGHT, -8, -10, -6);
 
         Scene graphScene = new Scene(graphGroup, HEIGHT, WIDTH);
         graphStage.setScene(graphScene);
@@ -53,10 +57,11 @@ public class Main extends Application {
         return (Math.sin(x));
     }
 
-    public void getAxis(Group group, double width, double height) {
+    public void getAxis(Group group, double width, double height, double root, double a, double b) {
+        double offset = width / 2 - getXToPixels(root, width, height, a, b);
         group.getChildren().addAll(
                 new Line(0, height / 2, width, height / 2),
-                new Line(width / 2, 0, width / 2, height)
+                new Line(width / 2  + offset, 0, width / 2  + offset, height)
         );
     }
 
@@ -73,7 +78,7 @@ public class Main extends Application {
         }
     }*/
 
-    public void getPlot(Group group, Equations equation, double width, double height, double a, double b) {
+    public void getPlot(Group group, Equations equation, double width, double height, double root, double a, double b) {
         for (double i = 0; i < width; i++) {
             group.getChildren().add(
                     new Line(
@@ -86,9 +91,9 @@ public class Main extends Application {
         }
     }
 
-    public double getXToPixels(double x, double width, double height, double a, double b) {
+/*    public double getXToPixels(double x, double width, double height, double a, double b) {
         return (width / (b - a) * (x + (b - a) / 2));
-    }
+    }*/
 
     public double getYToPixels(double y, double width, double height, double a, double b) {
         return (width / (b - a) * (-y + (b - a) / 2));
@@ -101,6 +106,22 @@ public class Main extends Application {
     public double getYFromPixels(double x, double width, double height, double a, double b) {
         return -(x / (width / (b - a)) - (b - a) / 2);
     }
+
+    public double getXToPixels(double x, double width, double height, double a, double b) {
+        return (width / (b - a) * (x - a));
+    }
+
+/*    public double getYToPixels(double y, double width, double height, double a, double b) {
+        return (width / (b - a) * (-y - a));
+    }
+
+    public double getXFromPixels(double x, double width, double height, double a, double b) {
+        return (x / (width / (b - a)) + a);
+    }
+
+    public double getYFromPixels(double x, double width, double height, double a, double b) {
+        return -(x / (width / (b - a)) + a);
+    }*/
 
     public static void main(String[] args) {
         launch();
