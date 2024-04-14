@@ -52,16 +52,19 @@ public class ResultPage {
                 case 1: {
                     Methods.Halving.getRoot(lowerBoundary, higherBoundary, precision, equation);
                     loadScene(primaryStage, "result-page-halving.fxml","solving equations");
+                    loadScene(graphStage, "blank.fxml", "graph");
                     break;
                 }
                 case 2: {
                     Methods.Newton.getRoot(lowerBoundary, higherBoundary, precision, equation);
                     loadScene(primaryStage, "result-page-newton.fxml","solving equations");
+                    loadScene(graphStage, "blank.fxml", "graph");
                     break;
                 }
                 case 3: {
                     Methods.Iteration.getRoot(lowerBoundary, higherBoundary, precision, equation);
                     loadScene(primaryStage, "result-page-iteration.fxml","solving equations");
+                    loadScene(graphStage, "blank.fxml", "graph");
                     break;
                 }
                 default: {
