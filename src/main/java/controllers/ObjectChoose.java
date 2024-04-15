@@ -107,21 +107,20 @@ public class ObjectChoose implements Initializable {
         }
 
         if (flag && !isNull(equation)) {
+            double lowerBoundaryValue = equation.getEquationValue(data.getLowerBoundary());
+            double higherBoundaryValue = equation.getEquationValue(data.getHigherBoundary());
+            if (lowerBoundaryValue * higherBoundaryValue >= 0) {
+                message = "Значения функции должны быть разных знаков на границах отрезка!";
+                flag = false;
+            }
+        }
+
+        if (flag && !isNull(equation)) {
             if (equation.getNumberOfRoots(data.getLowerBoundary(), data.getHigherBoundary()) != 1) {
                 message = "Уравнение на отрезке имеет больше одного корня или не имеет корней совсем!";
                 flag = false;
             }
         }
-
-/*        if (flag && !isNull(equation) && data.getMethodNumber() == 1) {
-            double lowerBoundaryValue = equation.getEquationValue(data.getLowerBoundary());
-            double higherBoundaryValue = equation.getEquationValue(data.getHigherBoundary());
-            if (!(lowerBoundaryValue < 0 && higherBoundaryValue >= 0)
-                    && !(lowerBoundaryValue >= 0 && higherBoundaryValue < 0)) {
-                message = "Значения функции должны быть разных знаков на границах отрезка!";
-                flag = false;
-            }
-        }*/
 
         //otherErrorsLabel.setText(message);
         if (!flag && !message.equals("")) showAlert(Alert.AlertType.ERROR, "error!", message);

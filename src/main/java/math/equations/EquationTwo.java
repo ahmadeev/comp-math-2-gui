@@ -8,12 +8,22 @@ public class EquationTwo extends Equations {
     }
 
     @Override
+    public double getDerivative(double x) {
+        return 4 * Math.pow(x, 3) + 5 * 3 * Math.pow(x, 2) + 10 * 2 * (x + 5) - 1;
+    }
+
+    @Override
+    public double getSecondDerivative(double x) {
+        return 4 * 3 * Math.pow(x, 2) + 5 * 3 * 2 * x + 10 * 2;
+    }
+
+    @Override
     public double getEquationValue(double x) {
         return (Math.pow(x, 4) + 5 * Math.pow(x, 3) + 10 * Math.pow((x+5), 2) - x);
     }
 
     @Override
-    public String getExpectedRoots() {
+    public String toString() {
         return ROOTS;
     }
 }

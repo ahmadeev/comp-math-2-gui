@@ -6,10 +6,15 @@ public class EquationThree extends Equations {
 
     public EquationThree() {}
 
-/*    @Override
+    @Override
     public double getDerivative(double x) {
         return (50 * Math.pow(x, 4) + 2 * x - 1 + 2 * Math.exp(x));
-    }*/
+    }
+
+    @Override
+    public double getSecondDerivative(double x) {
+        return 50 * 4 * Math.pow(x, 3) + 2 + 2 * Math.exp(x);
+    }
 
     @Override
     public double getEquationValue(double x) {
@@ -17,7 +22,7 @@ public class EquationThree extends Equations {
     }
 
     @Override
-    public String getExpectedRoots() {
+    public String toString() {
         return ROOTS;
     }
 }

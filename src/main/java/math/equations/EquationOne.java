@@ -8,12 +8,22 @@ public class EquationOne extends Equations {
     }
 
     @Override
+    public double getDerivative(double x) {
+        return 3 * Math.pow(x, 2) - 1;
+    }
+
+    @Override
+    public double getSecondDerivative(double x) {
+        return 6 * x;
+    }
+
+    @Override
     public double getEquationValue(double x) {
         return (Math.pow(x, 3) - x + 4);
     }
 
     @Override
-    public String getExpectedRoots() {
+    public String toString() {
         return ROOTS;
     }
 }

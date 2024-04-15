@@ -7,12 +7,22 @@ public class EquationFour extends Equations {
     public EquationFour() {}
 
     @Override
+    public double getDerivative(double x) {
+        return Math.cos(x);
+    }
+
+    @Override
+    public double getSecondDerivative(double x) {
+        return -Math.sin(x);
+    }
+
+    @Override
     public double getEquationValue(double x) {
         return (Math.sin(x));
     }
 
     @Override
-    public String getExpectedRoots() {
+    public String toString() {
         return ROOTS;
     }
 }

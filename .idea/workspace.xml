@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="откат до коммита до этого!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ObjectChoose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationFour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/Equations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/Equations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +75,7 @@
       <workItem from="1712951391122" duration="4836000" />
       <workItem from="1712960562786" duration="20133000" />
       <workItem from="1713065949244" duration="4000" />
+      <workItem from="1713217861715" duration="2837000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -333,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713064836381</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="откат до коммита до этого!">
+      <option name="closed" value="true" />
+      <created>1713218120888</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1713218120888</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
