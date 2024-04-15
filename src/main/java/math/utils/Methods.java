@@ -48,7 +48,7 @@ public class Methods {
             System.out.println();
             System.out.printf("После %d итераций корень уравнения равен %f с точностью %f.\n",
                     reps, lowerBoundary + (higherBoundary - lowerBoundary) / 2, precision);
-            System.out.printf("Уравнение имеет корни: %s\n", equation.toString());
+            System.out.printf("Уравнение имеет корни: %s\n", equation.getRoots());
         }
 
         public static void printStepResult(int counter, double lowerBoundary, double higherBoundary, double lowerBoundaryValue, double higherBoundaryValue) {
@@ -101,7 +101,7 @@ public class Methods {
             System.out.println();
             System.out.printf("После %d итераций корень уравнения равен %f с точностью %f.\n",
                     counter, x, precision);
-            System.out.printf("Уравнение имеет корни: %s\n", equation.toString());
+            System.out.printf("Уравнение имеет корни: %s\n", equation.getRoots());
         }
 
         public static void printStepResult(int counter, double previousX, double previousXValue, double previousXDerivativeValue, double x) {
@@ -153,7 +153,7 @@ public class Methods {
             System.out.println();
             System.out.printf("После %d итераций корень уравнения равен %f с точностью %f.\n",
                     counter, x, precision);
-            System.out.printf("Уравнение имеет корни: %s\n", equation.toString());
+            System.out.printf("Уравнение имеет корни: %s\n", equation.getRoots());
         }
 
         public static double getLambda(Equations equation, double x, double a, double b) {

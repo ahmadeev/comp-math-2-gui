@@ -23,7 +23,12 @@ public class EquationOne extends Equations {
     }
 
     @Override
-    public String toString() {
+    public String getRoots() {
         return ROOTS;
+    }
+
+    @Override
+    public String toString() {
+        return EQUATION;
     }
 }

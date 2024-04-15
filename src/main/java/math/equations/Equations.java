@@ -3,10 +3,13 @@ package math.equations;
 import java.math.BigDecimal;
 
 public abstract class Equations {
+    public static final String ROOTS = null;
 
     public Equations() {
     }
     public abstract double getEquationValue(double x);
+
+    public abstract String getRoots();
 
     public double getDerivative(double x) {
         double deltaX = 1.0e-3;
