@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="1404">
+    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="откат до коммита до этого!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationThree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,8 @@
       <workItem from="1712891963588" duration="3602000" />
       <workItem from="1712935661290" duration="8476000" />
       <workItem from="1712951391122" duration="4836000" />
-      <workItem from="1712960562786" duration="19165000" />
+      <workItem from="1712960562786" duration="20133000" />
+      <workItem from="1713065949244" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -325,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713059402282</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="откат до коммита до этого!">
+      <option name="closed" value="true" />
+      <created>1713064836381</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1713064836381</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +362,7 @@
     <MESSAGE value="а?" />
     <MESSAGE value="б" />
     <MESSAGE value="1404" />
-    <option name="LAST_COMMIT_MESSAGE" value="1404" />
+    <MESSAGE value="откат до коммита до этого!" />
+    <option name="LAST_COMMIT_MESSAGE" value="откат до коммита до этого!" />
   </component>
 </project>

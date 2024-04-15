@@ -124,7 +124,7 @@ public class ObjectChoose implements Initializable {
         }*/
 
         //otherErrorsLabel.setText(message);
-        if (!flag) showAlert(Alert.AlertType.ERROR, "error!", message);
+        if (!flag && !message.equals("")) showAlert(Alert.AlertType.ERROR, "error!", message);
 
 /*        if (flag) {
             Equations equation = getEquationByNumber(data.getObjectCode());
