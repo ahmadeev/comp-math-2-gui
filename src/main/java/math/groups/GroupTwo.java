@@ -83,17 +83,18 @@ public class GroupTwo {
 
         int counter = 0;
         while(true) {
+
             extendedMatrix = groupTwo.getExtendedMatrix(a, b);
             dx = groupTwo.solveSystem(extendedMatrix);
+            a += dx[0];
+            b += dx[1];
             if (abs(dx[0]) <= precision && abs(dx[1]) <= precision) {
                 break;
             }
-            a += dx[0];
-            b += dx[1];
             counter++;
         }
         System.out.println(counter + " : " + a + " : " + b);
-        return new GroupOutput(new double[] {a, b}, counter);
+        return new GroupOutput(new double[] {a, b}, dx, counter + 1);
     }
 
     public String getRoots() {

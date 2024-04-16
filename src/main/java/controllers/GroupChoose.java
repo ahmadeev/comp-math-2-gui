@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import math.groups.GroupTwo;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -34,6 +35,8 @@ public class GroupChoose implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         GroupOne groupOne = new GroupOne();
+        GroupTwo groupTwo = new GroupTwo();
         sL1.setText(groupOne.toString());
+        sL2.setText(groupTwo.toString());
     }
 }

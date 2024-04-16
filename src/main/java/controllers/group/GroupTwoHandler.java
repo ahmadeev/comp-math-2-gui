@@ -17,6 +17,7 @@ import static math.utils.Utils.showAlert;
 
 public class GroupTwoHandler {
     private static double[] x = null;
+    private static double[] dx = null;
     private static int counter = 0;
     private static String message = "";
     private static String xMessage = "";
@@ -42,10 +43,12 @@ public class GroupTwoHandler {
             GroupTwo groupTwo = new GroupTwo();
             GroupOutput result = groupTwo.solveSystem(groupTwo, groupData.getGroupData().get(0), groupData.getGroupData().get(1));
             x = result.getX();
+            dx = result.getDx();
             counter = result.getCounter();
             message = "Число итераций: " + counter +
                     "\nОжидаемые корни: " + groupTwo.getRoots() +
-                    "\nВычисленные корни: " + Arrays.toString(x);
+                    "\nВычисленные корни: " + Arrays.toString(x) +
+                    "\nПогрешность: " + Arrays.toString(dx);
             /*for(int i = 0; i < x.length; i++) {
                     xMessage += String.format("x%d: %.4f\n", i, x[i]);
                 }*/

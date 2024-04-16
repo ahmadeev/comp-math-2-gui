@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="ух 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/group/GroupTwoHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/math/groups/GroupOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/math/groups/GroupTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/main/gui/group-two-menu.fxml" afterDir="false" />
+    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="a?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/group/GroupOneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/group/GroupOneHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/group/GroupTwoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/group/GroupTwoHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/math/groups/GroupOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/groups/GroupOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/groups/GroupOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/groups/GroupOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/math/groups/GroupTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/groups/GroupTwo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +82,7 @@
       <workItem from="1712951391122" duration="4836000" />
       <workItem from="1712960562786" duration="20133000" />
       <workItem from="1713065949244" duration="4000" />
-      <workItem from="1713217861715" duration="18082000" />
+      <workItem from="1713217861715" duration="19511000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -405,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713234951951</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="a?">
+      <option name="closed" value="true" />
+      <created>1713240124975</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713240124975</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,6 +446,7 @@
     <MESSAGE value="ух" />
     <MESSAGE value="ух 2" />
     <MESSAGE value="ух 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="ух 3" />
+    <MESSAGE value="a?" />
+    <option name="LAST_COMMIT_MESSAGE" value="a?" />
   </component>
 </project>
