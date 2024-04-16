@@ -18,6 +18,9 @@ module main.gui {
 
     opens math.utils to java.base;
     opens math.equations to java.base;
+    opens math.groups to java.base;
     exports controllers.single;
     opens controllers.single to javafx.fxml;
+    exports controllers.group;
+    opens controllers.group to javafx.fxml;
 }

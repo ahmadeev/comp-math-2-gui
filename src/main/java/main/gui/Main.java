@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utils.GroupData;
 import utils.InputData;
 
 import java.io.IOException;
@@ -14,6 +15,7 @@ import static math.utils.Utils.exit;
 
 public class Main extends Application {
     public static InputData data = new InputData();
+    public static GroupData groupData = new GroupData();
     public static Stage primaryStage;
     public static Stage graphStage;
 
@@ -38,10 +40,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        //launch();
-        GroupOne groupOne = new GroupOne();
-        groupOne.solveSystem(groupOne);
-
-        exit("", 0);
+        launch();
     }
 }
