@@ -1,6 +1,6 @@
 package main.gui;
 
-import controllers.group.GroupOne;
+import math.groups.GroupOne;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 import utils.InputData;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 import static java.lang.Math.abs;
 import static math.utils.Utils.exit;

@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="замена производных">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/group/Equations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/math/utils/MatrixOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/math/utils/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/group/GroupOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/group/GroupOne.java" afterDir="false" />
+    <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="ух">
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/group/Equations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/groups/Equations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/group/GroupOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/groups/GroupOne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +74,7 @@
       <workItem from="1712951391122" duration="4836000" />
       <workItem from="1712960562786" duration="20133000" />
       <workItem from="1713065949244" duration="4000" />
-      <workItem from="1713217861715" duration="10584000" />
+      <workItem from="1713217861715" duration="10943000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -367,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713223582037</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="ух">
+      <option name="closed" value="true" />
+      <created>1713231658429</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1713231658429</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +403,7 @@
     <MESSAGE value="1404" />
     <MESSAGE value="откат до коммита до этого!" />
     <MESSAGE value="замена производных" />
-    <option name="LAST_COMMIT_MESSAGE" value="замена производных" />
+    <MESSAGE value="ух" />
+    <option name="LAST_COMMIT_MESSAGE" value="ух" />
   </component>
 </project>

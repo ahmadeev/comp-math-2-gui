@@ -1,6 +1,4 @@
-package controllers.group;
-
-import java.util.Arrays;
+package math.groups;
 
 import static java.lang.Math.abs;
 import static math.utils.MatrixOperations.*;

@@ -1,4 +1,4 @@
-package controllers.group;
+package math.groups;
 
 public interface Equations {
 
