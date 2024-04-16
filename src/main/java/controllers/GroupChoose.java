@@ -25,7 +25,7 @@ public class GroupChoose implements Initializable {
         if (src == sB1) {
             loadScene(primaryStage, "group-one-menu.fxml", "group");
         } else if (src == sB2) {
-
+            loadScene(primaryStage, "group-two-menu.fxml", "group");
         } else if (src == sB3) {
 
         }

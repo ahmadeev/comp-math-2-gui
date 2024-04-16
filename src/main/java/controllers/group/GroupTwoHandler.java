@@ -1,27 +1,21 @@
 package controllers.group;
 
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-
-import static java.util.Objects.isNull;
-import static main.gui.Main.*;
-import static math.utils.Methods.Halving.halvingData;
-import static math.utils.Methods.Iteration.iterationData;
-import static math.utils.Methods.Newton.newtonData;
-import static math.utils.Utils.showAlert;
-
 import javafx.stage.Stage;
 import math.groups.GroupOne;
 import math.groups.GroupOutput;
+import math.groups.GroupTwo;
 import utils.GroupData;
-import utils.InputData;
 
-import java.util.ArrayDeque;
 import java.util.Arrays;
 
-public class GroupOneHandler {
+import static java.util.Objects.isNull;
+import static main.gui.Main.*;
+import static math.utils.Utils.showAlert;
+
+public class GroupTwoHandler {
     private static double[] x = null;
     private static int counter = 0;
     private static String message = "";
@@ -45,12 +39,12 @@ public class GroupOneHandler {
         if (!flag) {
             showAlert(Alert.AlertType.ERROR, "Ошибка ввода", "Неправильно введены приближения!");
         } else {
-            GroupOne groupOne = new GroupOne();
-            GroupOutput result = groupOne.solveSystem(groupOne, groupData.getGroupData().get(0), groupData.getGroupData().get(1));
+            GroupTwo groupTwo = new GroupTwo();
+            GroupOutput result = groupTwo.solveSystem(groupTwo, groupData.getGroupData().get(0), groupData.getGroupData().get(1));
             x = result.getX();
             counter = result.getCounter();
             message = "Число итераций: " + counter +
-                    "\nОжидаемые корни: " + groupOne.getRoots() +
+                    "\nОжидаемые корни: " + groupTwo.getRoots() +
                     "\nВычисленные корни: " + Arrays.toString(x);
             /*for(int i = 0; i < x.length; i++) {
                     xMessage += String.format("x%d: %.4f\n", i, x[i]);

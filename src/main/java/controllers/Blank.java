@@ -42,6 +42,11 @@ public class Blank implements Initializable {
             graph.getData().add(series);
         } else if (data.getProgrammeMode() == 2) {
 
+            double a = -50;
+            double b = 50;
+            double step = 0.01;
+
+
         } else {
             exit("", 1);
         }
