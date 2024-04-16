@@ -11,8 +11,7 @@ import math.groups.GroupTwo;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static main.gui.Main.loadScene;
-import static main.gui.Main.primaryStage;
+import static main.gui.Main.*;
 
 public class GroupChoose implements Initializable {
     @FXML
@@ -24,8 +23,10 @@ public class GroupChoose implements Initializable {
     private void handleObjectButtonClick(ActionEvent event) {
         var src = event.getSource();
         if (src == sB1) {
+            groupData.setObjectNumber(1);
             loadScene(primaryStage, "group-one-menu.fxml", "group");
         } else if (src == sB2) {
+            groupData.setObjectNumber(2);
             loadScene(primaryStage, "group-two-menu.fxml", "group");
         }
     }

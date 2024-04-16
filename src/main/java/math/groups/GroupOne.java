@@ -5,13 +5,18 @@ import java.util.Arrays;
 import static java.lang.Math.abs;
 import static math.utils.MatrixOperations.*;
 
-public class GroupOne {
+public class GroupOne extends Groups {
     private static final int numberOfEquations = 2;
     private static final String ROOTS = "[(+-0,783; 1,84)]";
     private Equations[] equations = {
         new EquationOne(),
         new EquationTwo()
     };
+
+    @Override
+    public Equations[] getEquations() {
+        return equations;
+    }
 
     public GroupOne() {
 
@@ -25,6 +30,10 @@ public class GroupOne {
 
         public double getEquationValue(double x, double y) {
             return Math.pow(x, 2) + Math.pow(y, 2) - 4;
+        }
+
+        public double getEquationValueForPlot(double x) {
+            return Math.sqrt(4 - Math.pow(x, 2));
         }
 
         //  partial derivative with respect to x variable
@@ -45,6 +54,10 @@ public class GroupOne {
 
         public double getEquationValue(double x, double y) {
             return y - 3 * Math.pow(x, 2);
+        }
+
+        public double getEquationValueForPlot(double x) {
+            return 3 * Math.pow(x, 2);
         }
 
         //  частная производная по x

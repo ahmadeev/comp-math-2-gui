@@ -21,9 +21,14 @@ public class GroupTwoHandler {
     private static int counter = 0;
     private static String message = "";
     private static String xMessage = "";
+    private static GroupOutput groupOutput;
 
     @FXML
     TextField xTF0, xTF1;
+
+    public static GroupOutput getGroupOutput() {
+        return groupOutput;
+    }
 
     @FXML
     private void handleSubmitButtonClick() {
@@ -41,10 +46,10 @@ public class GroupTwoHandler {
             showAlert(Alert.AlertType.ERROR, "Ошибка ввода", "Неправильно введены приближения!");
         } else {
             GroupTwo groupTwo = new GroupTwo();
-            GroupOutput result = groupTwo.solveSystem(groupTwo, groupData.getGroupData().get(0), groupData.getGroupData().get(1));
-            x = result.getX();
-            dx = result.getDx();
-            counter = result.getCounter();
+            groupOutput = groupTwo.solveSystem(groupTwo, groupData.getGroupData().get(0), groupData.getGroupData().get(1));
+            x = groupOutput.getX();
+            dx = groupOutput.getDx();
+            counter = groupOutput.getCounter();
             message = "Число итераций: " + counter +
                     "\nОжидаемые корни: " + groupTwo.getRoots() +
                     "\nВычисленные корни: " + Arrays.toString(x) +
@@ -53,6 +58,7 @@ public class GroupTwoHandler {
                     xMessage += String.format("x%d: %.4f\n", i, x[i]);
                 }*/
 
+            loadScene(graphStage, "blank.fxml", "graph");
             showAlert(Alert.AlertType.INFORMATION, "Решение системы", message);
             groupData = new GroupData();
         }

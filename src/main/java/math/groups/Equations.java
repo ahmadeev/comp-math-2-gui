@@ -7,4 +7,6 @@ public interface Equations {
     public double getEquationDerivativeToY(double x, double y);
 
     public double getEquationValue(double x, double y);
+
+    public double getEquationValueForPlot(double x);
 }

@@ -3,13 +3,18 @@ package math.groups;
 import static java.lang.Math.abs;
 import static math.utils.MatrixOperations.*;
 
-public class GroupTwo {
+public class GroupTwo extends Groups {
     private static final int numberOfEquations = 2;
     private static final String ROOTS = "[(-2,236; -11,18), (2,236; 11,18)]";
     private Equations[] equations = {
             new EquationOne(),
             new EquationTwo()
     };
+
+    @Override
+    public Equations[] getEquations() {
+        return equations;
+    }
 
     public GroupTwo() {
 
@@ -23,6 +28,10 @@ public class GroupTwo {
 
         public double getEquationValue(double x, double y) {
             return y - 5 * x;
+        }
+
+        public double getEquationValueForPlot(double x) {
+            return 5 * x;
         }
 
         //  partial derivative with respect to x variable
@@ -43,6 +52,10 @@ public class GroupTwo {
 
         public double getEquationValue(double x, double y) {
             return y - Math.pow(x, 3);
+        }
+
+        public double getEquationValueForPlot(double x) {
+            return Math.pow(x, 3);
         }
 
         //  частная производная по x

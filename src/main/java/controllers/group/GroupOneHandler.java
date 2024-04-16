@@ -15,6 +15,7 @@ import static math.utils.Utils.showAlert;
 import javafx.stage.Stage;
 import math.groups.GroupOne;
 import math.groups.GroupOutput;
+import math.groups.GroupTwo;
 import utils.GroupData;
 import utils.InputData;
 
@@ -27,9 +28,14 @@ public class GroupOneHandler {
     private static int counter = 0;
     private static String message = "";
     private static String xMessage = "";
+    private static GroupOutput groupOutput;
 
     @FXML
     TextField xTF0, xTF1;
+
+    public static GroupOutput getGroupOutput() {
+        return groupOutput;
+    }
 
     @FXML
     private void handleSubmitButtonClick() {
@@ -47,10 +53,10 @@ public class GroupOneHandler {
             showAlert(Alert.AlertType.ERROR, "Ошибка ввода", "Неправильно введены приближения!");
         } else {
             GroupOne groupOne = new GroupOne();
-            GroupOutput result = groupOne.solveSystem(groupOne, groupData.getGroupData().get(0), groupData.getGroupData().get(1));
-            x = result.getX();
-            dx = result.getDx();
-            counter = result.getCounter();
+            groupOutput = groupOne.solveSystem(groupOne, groupData.getGroupData().get(0), groupData.getGroupData().get(1));
+            x = groupOutput.getX();
+            dx = groupOutput.getDx();
+            counter = groupOutput.getCounter();
             message = "Число итераций: " + counter +
                     "\nОжидаемые корни: " + groupOne.getRoots() +
                     "\nВычисленные корни: " + Arrays.toString(x) +
@@ -58,7 +64,7 @@ public class GroupOneHandler {
             /*for(int i = 0; i < x.length; i++) {
                     xMessage += String.format("x%d: %.4f\n", i, x[i]);
                 }*/
-
+            loadScene(graphStage, "blank.fxml", "graph");
             showAlert(Alert.AlertType.INFORMATION, "Решение системы", message);
             groupData = new GroupData();
         }
