@@ -1,13 +1,21 @@
 package controllers.group;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import static java.util.Objects.isNull;
 import static main.gui.Main.*;
+import static math.utils.Methods.Halving.halvingData;
+import static math.utils.Methods.Iteration.iterationData;
+import static math.utils.Methods.Newton.newtonData;
 import static math.utils.Utils.showAlert;
+
+import javafx.stage.Stage;
 import math.groups.GroupOne;
+import utils.GroupData;
+import utils.InputData;
 
 public class GroupOneHandler {
     @FXML
@@ -36,6 +44,19 @@ public class GroupOneHandler {
             }
             showAlert(Alert.AlertType.INFORMATION, "Решение системы", message);
         }
+    }
+
+    @FXML
+    private void handleExitButton() {
+        System.exit(0);
+    }
+
+    @FXML
+    private void handleNewButton() {
+        groupData = new GroupData();
+        graphStage.close();
+        graphStage = new Stage();
+        loadScene(primaryStage, "mode-select.fxml", "solving equations");
     }
 
     private String validateNumber(String text) {
