@@ -16,9 +16,9 @@ import static main.gui.Main.primaryStage;
 
 public class GroupChoose implements Initializable {
     @FXML
-    Label sL1, sL2, sL3;
+    Label sL1, sL2;
     @FXML
-    Button sB1, sB2, sB3;
+    Button sB1, sB2;
 
     @FXML
     private void handleObjectButtonClick(ActionEvent event) {
@@ -27,8 +27,6 @@ public class GroupChoose implements Initializable {
             loadScene(primaryStage, "group-one-menu.fxml", "group");
         } else if (src == sB2) {
             loadScene(primaryStage, "group-two-menu.fxml", "group");
-        } else if (src == sB3) {
-
         }
     }
 

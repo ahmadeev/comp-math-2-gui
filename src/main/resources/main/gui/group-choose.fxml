@@ -9,11 +9,9 @@
    <Label layoutX="104.0" layoutY="80.0" text="Выберите систему уравнений:" />
    <Label layoutX="104.0" layoutY="44.0" text="Для решения используется метод Ньютона." />
 
-   <Button fx:id="sB1" onAction="#handleObjectButtonClick" layoutX="104.0" layoutY="126.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="1" />
-   <Button fx:id="sB2" onAction="#handleObjectButtonClick" layoutX="104.0" layoutY="198.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="2" />
-   <Button fx:id="sB3" onAction="#handleObjectButtonClick" layoutX="104.0" layoutY="275.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="3" />
+   <Button fx:id="sB1" layoutX="104.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="50.0" text="1" />
+   <Button fx:id="sB2" layoutX="104.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleObjectButtonClick" prefHeight="50.0" prefWidth="50.0" text="2" />
 
    <Label fx:id="sL1" layoutX="180.0" layoutY="143.0" text="Label" />
    <Label fx:id="sL2" layoutX="180.0" layoutY="215.0" text="Label" />
-   <Label fx:id="sL3" layoutX="180.0" layoutY="292.0" text="Label" />
 </AnchorPane>
