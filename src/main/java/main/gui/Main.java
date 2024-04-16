@@ -1,5 +1,6 @@
 package main.gui;
 
+import controllers.group.GroupOne;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -7,6 +8,10 @@ import javafx.stage.Stage;
 import utils.InputData;
 
 import java.io.IOException;
+import java.util.Arrays;
+
+import static java.lang.Math.abs;
+import static math.utils.Utils.exit;
 
 public class Main extends Application {
     public static InputData data = new InputData();
@@ -34,6 +39,10 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        //launch();
+        GroupOne groupOne = new GroupOne();
+        groupOne.solveSystem(groupOne);
+
+        exit("", 0);
     }
 }

@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff4f4698-ca2b-42cc-b7f1-585719f5dacc" name="Changes" comment="замена производных">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/group/GroupOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/group/Equations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/math/utils/MatrixOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/math/utils/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationFour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationThree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/EquationTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/EquationTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/equations/Equations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/equations/Equations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/math/utils/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/group/GroupOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/group/GroupOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -59,6 +58,9 @@
       <recent name="main" />
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="math.utils" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -75,7 +77,7 @@
       <workItem from="1712951391122" duration="4836000" />
       <workItem from="1712960562786" duration="20133000" />
       <workItem from="1713065949244" duration="4000" />
-      <workItem from="1713217861715" duration="3525000" />
+      <workItem from="1713217861715" duration="10584000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -357,7 +359,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713223001164</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="замена производных">
+      <option name="closed" value="true" />
+      <created>1713223582037</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1713223582037</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
